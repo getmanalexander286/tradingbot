@@ -3,24 +3,36 @@
 
 aktiv: true              # false = beobachtet nur, handelt nicht
 
-startkapital: 1600.0     # EUR je Strategie, gleichmaessig auf die Maerkte verteilt
+startkapital: 2400.0     # EUR je Strategie, gleichmaessig auf alle Werte verteilt
 gebuehr: 0.0026          # 0,26 % pro Trade
 stop_loss: 0.08          # Notverkauf bei 8 % Verlust
 take_profit: 0.0         # 0 = aus
 
-# Beide Strategien laufen gleichzeitig auf denselben Kursen,
-# jede mit eigenem Depot. So sieht man, welche besser funktioniert.
+# --- Drei Strategien, gleiche Kurse, getrennte Depots ---
 strategien:
   - name: Langsam MA20/50
     kuerzel: langsam
+    zeitfenster: 1d
     ma_schnell: 20
     ma_langsam: 50
+
   - name: Schnell MA5/20
     kuerzel: schnell
+    zeitfenster: 1d
     ma_schnell: 5
     ma_langsam: 20
 
-maerkte:
+  - name: Daytrader MA8/21
+    kuerzel: day
+    zeitfenster: 15m
+    ma_schnell: 8
+    ma_langsam: 21
+    tagesschluss: true            # abends alles glattstellen
+    mindesthaltedauer_minuten: 30 # verhindert Hin- und Herspringen
+    stop_loss: 0.03               # engerer Stop als die anderen
+
+# --- Kryptowaehrungen (Kraken, 24/7) ---
+krypto:
   - BTC/EUR
   - ETH/EUR
   - SOL/EUR
@@ -37,3 +49,28 @@ maerkte:
   - AAVE/EUR
   - BCH/EUR
   - FIL/EUR
+
+# --- Aktien (Yahoo Finance, alle in Euro notiert) ---
+# Boersenzeiten: Mo-Fr etwa 08:00-16:30 UTC. Ausserhalb bleibt der Kurs stehen.
+aktien:
+  - symbol: SAP.DE
+    name: SAP
+  - symbol: SIE.DE
+    name: Siemens
+  - symbol: ALV.DE
+    name: Allianz
+  - symbol: ASML.AS
+    name: ASML
+  - symbol: MC.PA
+    name: LVMH
+  - symbol: AIR.PA
+    name: Airbus
+  - symbol: APC.DE
+    name: Apple
+  - symbol: MSF.DE
+    name: Microsoft
+
+# Wann der Daytrader spaetestens verkauft (UTC)
+tagesschluss_utc:
+  aktie: "16:15"
+  krypto: "21:45"

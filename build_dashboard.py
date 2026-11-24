@@ -10,7 +10,6 @@ ORDNER = os.path.dirname(os.path.abspath(__file__))
 STAND = os.path.join(ORDNER, 'state')
 ZIEL = os.path.join(ORDNER, 'docs', 'index.html')
 
-# Farben aus dem Design-System, Paar geprueft fuer Farbfehlsichtigkeit
 T = {
     'surface': ('#fcfcfb', '#1a1a19'),
     'plane': ('#f9f9f7', '#0d0d0d'),
@@ -24,8 +23,9 @@ T = {
     'rand': ('rgba(11,11,11,0.10)', 'rgba(255,255,255,0.10)'),
     'serie1': ('#2a78d6', '#3987e5'),
     'serie2': ('#eb6834', '#d95926'),
+    'serie3': ('#1baf7a', '#199e70'),
 }
-SERIEN = ['serie1', 'serie2']
+SERIEN = ['serie1', 'serie2', 'serie3']
 
 
 def lade_json(name, standard):
@@ -49,21 +49,27 @@ def zahl(x, n=2):
     return f"{x:,.{n}f}".replace(',', ' ')
 
 
-def klasse(x):
+def kl(x):
     return 'gut' if x > 0 else ('schlecht' if x < 0 else '')
+
+
+def fl(x, standard=0.0):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return standard
 
 
 # ------------------------------------------------------------- Chart
 
 def vergleichschart(reihen, start):
-    """reihen: Liste (name, farbvariable, [(zeit, wert), ...])"""
     laengen = [len(p) for _, _, p in reihen]
     if not laengen or max(laengen) < 2:
         return ('<p class="hinweis">Noch zu wenig Daten. Der Chart erscheint '
                 'nach dem zweiten Durchlauf.</p>')
 
     B, H = 1000, 340
-    ol, orr, otop, ou = 64, 96, 16, 34
+    ol, orr, otop, ou = 64, 118, 16, 34
     pb, ph = B - ol - orr, H - otop - ou
 
     alle = [w for _, _, p in reihen for _, w in p] + [start]
@@ -85,138 +91,141 @@ def vergleichschart(reihen, start):
         yy = y(w)
         teile.append(f'<line x1="{ol}" y1="{yy:.1f}" x2="{B-orr}" y2="{yy:.1f}" class="gitter"/>')
         teile.append(f'<text x="{ol-10}" y="{yy+4:.1f}" class="achse" text-anchor="end">'
-                     f'{zahl(w, 0)}</text>')
+                     f'{zahl(w,0)}</text>')
+    teile.append(f'<line x1="{ol}" y1="{y(start):.1f}" x2="{B-orr}" y2="{y(start):.1f}" '
+                 f'class="bezug"/>')
 
-    y0 = y(start)
-    teile.append(f'<line x1="{ol}" y1="{y0:.1f}" x2="{B-orr}" y2="{y0:.1f}" class="bezug"/>')
-
-    js_reihen = []
-    for idx, (name, farbe, punkte) in enumerate(reihen):
+    js = []
+    enden = []
+    for name, farbe, punkte in reihen:
         if len(punkte) < 2:
             continue
-        pfad = ' '.join(f"{'M' if i == 0 else 'L'}{x(i):.1f},{y(w):.1f}"
-                        for i, (_, w) in enumerate(punkte))
-        teile.append(f'<path d="{pfad}" class="linie" style="stroke:var(--{farbe})"/>')
-        # Direktbeschriftung am Linienende statt nur Legende
-        ex, ey = x(len(punkte) - 1), y(punkte[-1][1])
-        teile.append(f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="4" '
-                     f'style="fill:var(--{farbe})" class="ende"/>')
-        teile.append(f'<text x="{ex+10:.1f}" y="{ey+4:.1f}" class="endlabel" '
-                     f'style="fill:var(--{farbe})">{name}</text>')
-        js_reihen.append({'name': name, 'farbe': farbe,
-                          'punkte': [[kurz(t), round(w, 2), round(x(i), 1), round(y(w), 1)]
-                                     for i, (t, w) in enumerate(punkte)]})
+        d = ' '.join(f"{'M' if i == 0 else 'L'}{x(i):.1f},{y(w):.1f}"
+                     for i, (_, w) in enumerate(punkte))
+        teile.append(f'<path d="{d}" class="linie" style="stroke:var(--{farbe})"/>')
+        enden.append((x(len(punkte) - 1), y(punkte[-1][1]), name, farbe))
+        js.append({'name': name, 'farbe': farbe,
+                   'punkte': [[kurz(t), round(w, 2), round(x(i), 1), round(y(w), 1)]
+                              for i, (t, w) in enumerate(punkte)]})
 
-    marken = []
+    # Endbeschriftungen gegen Ueberlappung auseinanderziehen
+    enden.sort(key=lambda e: e[1])
+    letzte = -99.0
+    for ex, ey, name, farbe in enden:
+        ty = max(ey, letzte + 15)
+        letzte = ty
+        teile.append(f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="4" class="ende" '
+                     f'style="fill:var(--{farbe})"/>')
+        teile.append(f'<text x="{ex+9:.1f}" y="{ty+4:.1f}" class="endlabel" '
+                     f'style="fill:var(--{farbe})">{name.split()[0]}</text>')
+
     laengste = max(reihen, key=lambda r: len(r[2]))[2]
+    marken = []
     for i in (0, len(laengste) // 2, len(laengste) - 1):
         anker = 'start' if i == 0 else ('end' if i == len(laengste) - 1 else 'middle')
         marken.append(f'<text x="{x(i):.1f}" y="{H-12}" class="achse" '
                       f'text-anchor="{anker}">{kurz(laengste[i][0])}</text>')
 
-    legende = ' '.join(
-        f'<span class="le"><i style="background:var(--{f})"></i>{n_}</span>'
-        for n_, f, p in reihen if len(p) >= 2)
+    legende = ' '.join(f'<span class="le"><i style="background:var(--{f})"></i>{n_}</span>'
+                       for n_, f, p in reihen if len(p) >= 2)
 
     return f"""
 <div class="legende">{legende}<span class="le gestrichelt">Startkapital</span></div>
 <div class="chartbox">
   <svg viewBox="0 0 {B} {H}" class="chart" id="chart" role="img"
-       aria-label="Vergleich des Depotwerts der Strategien in Euro">
+       aria-label="Vergleich der Depotwerte aller Strategien in Euro">
     {''.join(teile)}
     <line x1="{ol}" y1="{otop+ph}" x2="{B-orr}" y2="{otop+ph}" class="basis"/>
     {''.join(marken)}
-    <g id="fokus" style="display:none">
-      <line y1="{otop}" y2="{otop+ph}" class="kreuz"/>
-    </g>
+    <g id="fokus" style="display:none"><line y1="{otop}" y2="{otop+ph}" class="kreuz"/></g>
     <rect x="{ol}" y="{otop}" width="{pb}" height="{ph}" fill="transparent" id="feld"/>
   </svg>
   <div id="tipp" class="tipp" hidden></div>
 </div>
 <script>
-const reihen = {json.dumps(js_reihen)};
+const reihen = {json.dumps(js)};
 const svg = document.getElementById('chart');
 const feld = document.getElementById('feld');
 const fokus = document.getElementById('fokus');
 const kreuz = fokus.querySelector('line');
 const tipp = document.getElementById('tipp');
-
 function zeigen(evt) {{
   const kasten = svg.getBoundingClientRect();
   const sx = (evt.clientX - kasten.left) / kasten.width * {B};
-  let zeilen = '', zeitpunkt = '', bestX = null;
+  let zeilen = '', zeitpunkt = '', bx = null;
   reihen.forEach(r => {{
     let best = 0, ab = Infinity;
     r.punkte.forEach((p, i) => {{ const d = Math.abs(p[2] - sx);
       if (d < ab) {{ ab = d; best = i; }} }});
     const p = r.punkte[best];
     zeitpunkt = p[0];
-    if (bestX === null) bestX = p[2];
+    if (bx === null) bx = p[2];
     zeilen += '<div class="tz"><i style="background:var(--' + r.farbe + ')"></i>' +
       r.name + '<b>' + p[1].toLocaleString('de-DE',
-      {{minimumFractionDigits: 2, maximumFractionDigits: 2}}) + ' &euro;</b></div>';
+      {{minimumFractionDigits:2, maximumFractionDigits:2}}) + ' &euro;</b></div>';
   }});
-  if (bestX === null) return;
-  kreuz.setAttribute('x1', bestX); kreuz.setAttribute('x2', bestX);
+  if (bx === null) return;
+  kreuz.setAttribute('x1', bx); kreuz.setAttribute('x2', bx);
   fokus.style.display = '';
   tipp.hidden = false;
   tipp.innerHTML = '<div class="tt">' + zeitpunkt + '</div>' + zeilen;
-  const px = kasten.left + bestX / {B} * kasten.width;
-  tipp.style.left = Math.min(Math.max(px - 80, 4),
+  const px = kasten.left + bx / {B} * kasten.width;
+  tipp.style.left = Math.min(Math.max(px - 90, 4),
     window.innerWidth - tipp.offsetWidth - 8) + 'px';
   tipp.style.top = (kasten.top + window.scrollY + 20) + 'px';
 }}
 feld.addEventListener('mousemove', zeigen);
 feld.addEventListener('touchmove', e => {{ zeigen(e.touches[0]); e.preventDefault(); }});
-svg.addEventListener('mouseleave', () => {{ fokus.style.display = 'none'; tipp.hidden = true; }});
+svg.addEventListener('mouseleave', () => {{ fokus.style.display='none'; tipp.hidden=true; }});
 </script>
 """
 
 
 # ------------------------------------------------------------- Tabellen
 
-def positionstabelle(zustand, daten, kuerzel):
+def positionstabelle(zustand, werte, signale):
     zeilen = []
-    for markt in sorted(zustand):
-        p = zustand[markt]
-        d = daten.get(markt, {})
-        preis = d.get('preis', 0.0)
-        s = d.get('strategien', {}).get(kuerzel, {})
-        wert = p['bargeld'] + p['menge'] * preis
+    for symbol in sorted(zustand, key=lambda s: werte.get(s, {}).get('name', s)):
+        p = zustand[symbol]
+        w = werte.get(symbol, {})
+        preis = w.get('preis', 0.0)
+        name = w.get('name', symbol)
+        typ = w.get('typ', '-')
         offen = p['menge'] > 0
+        wert = p['bargeld'] + p['menge'] * preis
         gv = (preis / p['einstieg'] - 1) * 100 if offen and p['einstieg'] else None
-        ml = s.get('ma_langsam', 0)
+
+        s = signale.get(symbol, {})
+        ml = s.get('ma_langsam', 0) or 0
         abstand = (s.get('ma_schnell', 0) / ml - 1) * 100 if ml else None
+
         zeilen.append(f"""<tr>
-<td><b>{markt.split('/')[0]}</b></td>
+<td><b>{name}</b></td>
+<td><span class="typ {typ}">{'Krypto' if typ == 'krypto' else 'Aktie'}</span></td>
 <td>{'<span class="marke offen">investiert</span>' if offen
      else '<span class="marke">Bargeld</span>'}</td>
 <td class="z">{preis:.4f}</td>
-<td class="z {klasse(gv or 0)}">{f'{gv:+.2f} %' if gv is not None else '-'}</td>
+<td class="z {kl(gv or 0)}">{f'{gv:+.2f} %' if gv is not None else '-'}</td>
 <td class="z">{zahl(wert)}</td>
 <td class="z">{f'{abstand:+.2f} %' if abstand is not None else '-'}</td>
 </tr>""")
     return ''.join(zeilen)
 
 
-def tradetabelle(trades):
+def tradetabelle(trades, werte):
     if not trades:
-        return ('<tr><td colspan="6" style="color:var(--muted)">Noch keine Trades.</td></tr>')
+        return '<tr><td colspan="6" style="color:var(--muted)">Noch keine Trades.</td></tr>'
     zeilen = []
-    for t in reversed(trades[-40:]):
-        try:
-            gv = float(t['gewinn_prozent'])
-        except (TypeError, ValueError):
-            gv = 0.0
+    for t in reversed(trades[-50:]):
+        gv = fl(t.get('gewinn_prozent'))
+        sym = t.get('wert', '')
+        name = werte.get(sym, {}).get('name', sym.split('/')[0])
+        verkauf = t['typ'] == 'VERKAUF'
         zeilen.append(f"""<tr>
-<td>{kurz(t['zeit'])}</td>
-<td><b>{t['markt'].split('/')[0]}</b></td>
-<td>{t['typ'].capitalize()}</td>
-<td class="z">{float(t['preis']):.4f}</td>
-<td class="z {klasse(gv) if t['typ'] == 'VERKAUF' else ''}">
-{f'{gv:+.2f} %' if t['typ'] == 'VERKAUF' else '-'}</td>
-<td>{t['grund']}</td>
-</tr>""")
+<td>{kurz(t['zeit'])}</td><td><b>{name}</b></td><td>{t['typ'].capitalize()}</td>
+<td class="z">{fl(t['preis']):.4f}</td>
+<td class="z {kl(gv) if verkauf else ''}">{f'{gv:+.2f} %' if verkauf else '-'}</td>
+<td>{t['grund']}</td></tr>""")
     return ''.join(zeilen)
 
 
@@ -226,17 +235,17 @@ def main():
     cfg = yaml.safe_load(open(os.path.join(ORDNER, 'config.yaml')))
     letzter = lade_json('last_run.json', {})
     start = float(cfg['startkapital'])
-    daten = letzter.get('daten', {})
-    anzahl = int(letzter.get('anzahl_maerkte', len(cfg['maerkte'])))
+    werte = letzter.get('werte', {})
+    anzahl = int(letzter.get('anzahl_werte', 0)) or len(werte)
     aktiv = bool(letzter.get('aktiv', True))
 
     stand = ''
     if letzter.get('zeit'):
         try:
-            minuten = (datetime.now(timezone.utc)
-                       - datetime.fromisoformat(letzter['zeit'])).total_seconds() / 60
-            stand = (f'<span class="marke offen">vor {minuten:.0f} min</span>' if minuten < 30
-                     else f'<span class="marke warn">vor {minuten/60:.1f} h</span>')
+            m = (datetime.now(timezone.utc)
+                 - datetime.fromisoformat(letzter['zeit'])).total_seconds() / 60
+            stand = (f'<span class="marke offen">vor {m:.0f} min</span>' if m < 30
+                     else f'<span class="marke warn">vor {m/60:.1f} h</span>')
         except Exception:
             pass
 
@@ -246,12 +255,11 @@ def main():
         k = st['kuerzel']
         farbe = SERIEN[idx % len(SERIEN)]
         info = letzter.get('strategien', {}).get(k, {})
-        gesamt = float(info.get('gesamtwert', start))
+        gesamt = fl(info.get('gesamtwert'), start)
         inv = int(info.get('investiert', 0))
 
-        verlauf = lade_csv(k, 'history.csv')
         punkte = []
-        for z in verlauf:
+        for z in lade_csv(k, 'history.csv'):
             try:
                 punkte.append((z['zeit'], float(z['gesamtwert'])))
             except (KeyError, TypeError, ValueError):
@@ -259,39 +267,42 @@ def main():
         reihen.append((st['name'], farbe, punkte[-600:]))
 
         trades = lade_csv(k, 'trades.csv')
-        verkaeufe = [t for t in trades if t['typ'] == 'VERKAUF']
-        werte = []
-        for t in verkaeufe:
-            try:
-                werte.append(float(t['gewinn_prozent']))
-            except (TypeError, ValueError):
-                pass
-        quote = f"{sum(1 for w in werte if w > 0) / len(werte) * 100:.0f} %" if werte else '-'
-        schnitt = f"{sum(werte) / len(werte):+.2f} %" if werte else '-'
+        gewinne = [fl(t.get('gewinn_prozent')) for t in trades if t['typ'] == 'VERKAUF']
+        quote = f"{sum(1 for g in gewinne if g > 0)/len(gewinne)*100:.0f} %" if gewinne else '-'
+        schnitt = f"{sum(gewinne)/len(gewinne):+.2f} %" if gewinne else '-'
 
         erg = gesamt - start
+        zf = st.get('zeitfenster', '1d')
+        zf_text = {'1d': 'Tageskerzen', '1h': 'Stundenkerzen',
+                   '15m': '15-Minuten-Kerzen', '5m': '5-Minuten-Kerzen'}.get(zf, zf)
+
         karten.append(f"""
 <div class="karte" style="border-left:3px solid var(--{farbe})">
   <div class="titel">{st['name']}</div>
   <div class="wert">{zahl(gesamt)} &euro;</div>
-  <div class="neben {klasse(erg)}">{erg:+,.2f} &euro; &middot; {(gesamt/start-1)*100:+.2f} %</div>
+  <div class="neben {kl(erg)}">{erg:+,.2f} &euro; &middot; {(gesamt/start-1)*100:+.2f} %</div>
   <div class="neben">{inv}/{anzahl} investiert &middot; {len(trades)} Trades
-    &middot; Treffer {quote}</div>
+    &middot; Treffer {quote} &middot; Schnitt {schnitt}</div>
+  <div class="neben" style="color:var(--muted)">{zf_text}
+    &middot; Stop-Loss {st.get('stop_loss', cfg['stop_loss'])*100:.0f} %</div>
 </div>""")
 
-        zustand = lade_json(os.path.join(k, 'positions.json'), {})
         bloecke.append(f"""
 <h2><span class="punktfarbe" style="background:var(--{farbe})"></span>{st['name']}</h2>
 <div class="rolle"><table>
-<thead><tr><th>Markt</th><th>Status</th><th class="z">Kurs</th><th class="z">G/V</th>
-<th class="z">Wert &euro;</th><th class="z">Abstand MA</th></tr></thead>
-<tbody>{positionstabelle(zustand, daten, k)}</tbody></table></div>
+<thead><tr><th>Wert</th><th>Art</th><th>Status</th><th class="z">Kurs</th>
+<th class="z">G/V</th><th class="z">Wert &euro;</th><th class="z">Abstand MA</th></tr></thead>
+<tbody>{positionstabelle(lade_json(os.path.join(k, 'positions.json'), {}), werte,
+                         letzter.get('signale', {}).get(k, {}))}</tbody></table></div>
 <details><summary>Trades anzeigen ({len(trades)})</summary>
 <div class="rolle" style="margin-top:8px"><table>
-<thead><tr><th>Zeit</th><th>Markt</th><th>Typ</th><th class="z">Kurs</th>
+<thead><tr><th>Zeit</th><th>Wert</th><th>Typ</th><th class="z">Kurs</th>
 <th class="z">G/V</th><th>Grund</th></tr></thead>
-<tbody>{tradetabelle(trades)}</tbody></table></div></details>
+<tbody>{tradetabelle(trades, werte)}</tbody></table></div></details>
 """)
+
+    anz_krypto = sum(1 for v in werte.values() if v.get('typ') == 'krypto')
+    anz_aktien = sum(1 for v in werte.values() if v.get('typ') == 'aktie')
 
     css_hell = ''.join(f"  --{k}: {v[0]};\n" for k, v in T.items())
     css_dunkel = ''.join(f"    --{k}: {v[1]};\n" for k, v in T.items())
@@ -304,22 +315,21 @@ def main():
 <meta http-equiv="refresh" content="300">
 <title>Trading-Bot</title>
 <style>
-:root {{
-  color-scheme: light dark;
+:root {{ color-scheme: light dark;
 {css_hell}}}
 @media (prefers-color-scheme: dark) {{ :root {{
 {css_dunkel}}} }}
-* {{ box-sizing: border-box; }}
+* {{ box-sizing:border-box; }}
 body {{ margin:0; padding:20px 16px 64px; background:var(--plane); color:var(--ink);
   font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }}
-.huelle {{ max-width:1040px; margin:0 auto; }}
+.huelle {{ max-width:1100px; margin:0 auto; }}
 h1 {{ font-size:20px; margin:0; letter-spacing:-0.01em; }}
 h2 {{ font-size:15px; margin:34px 0 10px; color:var(--ink2); font-weight:600;
   display:flex; align-items:center; gap:8px; }}
 .punktfarbe {{ width:10px; height:10px; border-radius:3px; display:inline-block; }}
 .kopf {{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }}
 .unter {{ color:var(--muted); font-size:13px; margin:4px 0 22px; }}
-.karten {{ display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }}
+.karten {{ display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }}
 .karte {{ background:var(--surface); border:1px solid var(--rand); border-radius:10px;
   padding:14px 16px; }}
 .karte .titel {{ font-size:12px; color:var(--muted); margin-bottom:6px;
@@ -354,7 +364,7 @@ h2 {{ font-size:15px; margin:34px 0 10px; color:var(--ink2); font-weight:600;
 .tipp .tt {{ color:var(--muted); font-size:12px; margin-bottom:4px; }}
 .tipp .tz {{ display:flex; align-items:center; gap:6px; }}
 .tipp .tz i {{ width:10px; height:3px; border-radius:2px; display:inline-block; }}
-.tipp .tz b {{ margin-left:auto; padding-left:12px; }}
+.tipp .tz b {{ margin-left:auto; padding-left:14px; }}
 .rolle {{ overflow-x:auto; background:var(--surface); border:1px solid var(--rand);
   border-radius:10px; }}
 table {{ width:100%; border-collapse:collapse; font-size:14px; }}
@@ -370,6 +380,7 @@ tr:last-child td {{ border-bottom:none; }}
   color:var(--serie1); }}
 .marke.warn {{ background:color-mix(in oklab,var(--schlecht) 16%,transparent);
   color:var(--schlecht); }}
+.typ {{ font-size:12px; color:var(--muted); }}
 .hinweis {{ color:var(--muted); background:var(--surface); border:1px solid var(--rand);
   border-radius:10px; padding:20px; margin:0; font-size:14px; }}
 details {{ margin-top:10px; }}
@@ -385,7 +396,8 @@ footer {{ margin-top:36px; color:var(--muted); font-size:12px; }}
   {stand}
   {'<span class="marke">pausiert</span>' if not aktiv else ''}
 </div>
-<p class="unter">Papier-Depot, kein echtes Geld &middot; zwei Strategien im Vergleich
+<p class="unter">Papier-Depot, kein echtes Geld &middot; drei Strategien im Vergleich
+  &middot; {anz_krypto} Kryptowaehrungen und {anz_aktien} Aktien
   &middot; Stand {kurz(letzter.get('zeit',''))} UTC</p>
 
 <div class="karten">{''.join(karten)}</div>
@@ -396,9 +408,11 @@ footer {{ margin-top:36px; color:var(--muted); font-size:12px; }}
 {''.join(bloecke)}
 
 <footer>
-  Stop-Loss {cfg['stop_loss']*100:.0f} % &middot;
-  Take-Profit {'aus' if not cfg.get('take_profit') else f"{cfg['take_profit']*100:.0f} %"}
-  &middot; Gebuehr {cfg['gebuehr']*100:.2f} % &middot; {anzahl} Maerkte<br>
+  Gebuehr {cfg['gebuehr']*100:.2f} % je Trade &middot; {anzahl} Werte
+  &middot; Aktienkurse von Yahoo Finance, Kryptokurse von Kraken<br>
+  Der Daytrader stellt abends glatt: Aktien {cfg['tagesschluss_utc']['aktie']} UTC,
+  Krypto {cfg['tagesschluss_utc']['krypto']} UTC.
+  Ausserhalb der Boersenzeiten werden Aktien nicht gehandelt.<br>
   Seite aktualisiert sich alle 5 Minuten selbst.
   Einstellungen in <code>config.yaml</code> im Repository.
 </footer>
