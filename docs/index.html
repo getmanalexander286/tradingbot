@@ -115,7 +115,7 @@ footer { margin-top:36px; color:var(--muted); font-size:12px; }
 </div>
 <p class="unter">Papier-Depot, kein echtes Geld &middot; drei Strategien im Vergleich
   &middot; 16 Kryptowaehrungen und 8 Aktien
-  &middot; Stand 24.11. 23:07 UTC</p>
+  &middot; Stand 24.11. 23:35 UTC</p>
 
 <div class="karten">
 <div class="karte" style="border-left:3px solid var(--serie1)">
@@ -148,20 +148,20 @@ footer { margin-top:36px; color:var(--muted); font-size:12px; }
 
 <h2>Vergleich der Depotwerte</h2>
 
-<div class="legende"><span class="le"><i style="background:var(--serie1)"></i>Langsam MA20/50</span> <span class="le"><i style="background:var(--serie2)"></i>Schnell MA5/20</span><span class="le gestrichelt">Startkapital</span></div>
+<div class="legende"><span class="le"><i style="background:var(--serie1)"></i>Langsam MA20/50</span> <span class="le"><i style="background:var(--serie2)"></i>Schnell MA5/20</span> <span class="le"><i style="background:var(--serie3)"></i>Daytrader MA8/21</span><span class="le gestrichelt">Startkapital</span></div>
 <div class="chartbox">
   <svg viewBox="0 0 1000 340" class="chart" id="chart" role="img"
        aria-label="Vergleich der Depotwerte aller Strategien in Euro">
-    <line x1="64" y1="306.0" x2="882" y2="306.0" class="gitter"/><text x="54" y="310.0" class="achse" text-anchor="end">1 520</text><line x1="64" y1="233.5" x2="882" y2="233.5" class="gitter"/><text x="54" y="237.5" class="achse" text-anchor="end">1 760</text><line x1="64" y1="161.0" x2="882" y2="161.0" class="gitter"/><text x="54" y="165.0" class="achse" text-anchor="end">2 000</text><line x1="64" y1="88.5" x2="882" y2="88.5" class="gitter"/><text x="54" y="92.5" class="achse" text-anchor="end">2 240</text><line x1="64" y1="16.0" x2="882" y2="16.0" class="gitter"/><text x="54" y="20.0" class="achse" text-anchor="end">2 480</text><line x1="64" y1="40.2" x2="882" y2="40.2" class="bezug"/><path d="M64.0,281.8 L882.0,40.7" class="linie" style="stroke:var(--serie1)"/><path d="M64.0,281.8 L882.0,40.3" class="linie" style="stroke:var(--serie2)"/><circle cx="882.0" cy="40.3" r="4" class="ende" style="fill:var(--serie2)"/><text x="891.0" y="44.3" class="endlabel" style="fill:var(--serie2)">Schnell</text><circle cx="882.0" cy="40.7" r="4" class="ende" style="fill:var(--serie1)"/><text x="891.0" y="59.3" class="endlabel" style="fill:var(--serie1)">Langsam</text>
+    <line x1="64" y1="306.0" x2="882" y2="306.0" class="gitter"/><text x="54" y="310.0" class="achse" text-anchor="end">1 520</text><line x1="64" y1="233.5" x2="882" y2="233.5" class="gitter"/><text x="54" y="237.5" class="achse" text-anchor="end">1 760</text><line x1="64" y1="161.0" x2="882" y2="161.0" class="gitter"/><text x="54" y="165.0" class="achse" text-anchor="end">2 000</text><line x1="64" y1="88.5" x2="882" y2="88.5" class="gitter"/><text x="54" y="92.5" class="achse" text-anchor="end">2 240</text><line x1="64" y1="16.0" x2="882" y2="16.0" class="gitter"/><text x="54" y="20.0" class="achse" text-anchor="end">2 480</text><line x1="64" y1="40.2" x2="882" y2="40.2" class="bezug"/><path d="M64.0,281.8 L473.0,40.7 L882.0,40.7" class="linie" style="stroke:var(--serie1)"/><path d="M64.0,281.8 L473.0,40.3 L882.0,40.3" class="linie" style="stroke:var(--serie2)"/><path d="M64.0,40.2 L473.0,40.2" class="linie" style="stroke:var(--serie3)"/><circle cx="473.0" cy="40.2" r="4" class="ende" style="fill:var(--serie3)"/><text x="482.0" y="44.2" class="endlabel" style="fill:var(--serie3)">Daytrader</text><circle cx="882.0" cy="40.3" r="4" class="ende" style="fill:var(--serie2)"/><text x="891.0" y="59.2" class="endlabel" style="fill:var(--serie2)">Schnell</text><circle cx="882.0" cy="40.7" r="4" class="ende" style="fill:var(--serie1)"/><text x="891.0" y="74.2" class="endlabel" style="fill:var(--serie1)">Langsam</text>
     <line x1="64" y1="306" x2="882" y2="306" class="basis"/>
-    <text x="64.0" y="328" class="achse" text-anchor="start">24.11. 22:53</text><text x="882.0" y="328" class="achse" text-anchor="end">24.11. 23:07</text><text x="882.0" y="328" class="achse" text-anchor="end">24.11. 23:07</text>
+    <text x="64.0" y="328" class="achse" text-anchor="start">24.11. 22:53</text><text x="473.0" y="328" class="achse" text-anchor="middle">24.11. 23:07</text><text x="882.0" y="328" class="achse" text-anchor="end">24.11. 23:35</text>
     <g id="fokus" style="display:none"><line y1="16" y2="306" class="kreuz"/></g>
     <rect x="64" y="16" width="818" height="290" fill="transparent" id="feld"/>
   </svg>
   <div id="tipp" class="tipp" hidden></div>
 </div>
 <script>
-const reihen = [{"name": "Langsam MA20/50", "farbe": "serie1", "punkte": [["24.11. 22:53", 1600.0, 64.0, 281.8], ["24.11. 23:07", 2398.18, 882.0, 40.7]]}, {"name": "Schnell MA5/20", "farbe": "serie2", "punkte": [["24.11. 22:53", 1600.0, 64.0, 281.8], ["24.11. 23:07", 2399.48, 882.0, 40.3]]}];
+const reihen = [{"name": "Langsam MA20/50", "farbe": "serie1", "punkte": [["24.11. 22:53", 1600.0, 64.0, 281.8], ["24.11. 23:07", 2398.18, 473.0, 40.7], ["24.11. 23:35", 2398.18, 882.0, 40.7]]}, {"name": "Schnell MA5/20", "farbe": "serie2", "punkte": [["24.11. 22:53", 1600.0, 64.0, 281.8], ["24.11. 23:07", 2399.48, 473.0, 40.3], ["24.11. 23:35", 2399.48, 882.0, 40.3]]}, {"name": "Daytrader MA8/21", "farbe": "serie3", "punkte": [["24.11. 23:07", 2400.0, 64.0, 40.2], ["24.11. 23:35", 2400.0, 473.0, 40.2]]}];
 const svg = document.getElementById('chart');
 const feld = document.getElementById('feld');
 const fokus = document.getElementById('fokus');
@@ -207,7 +207,7 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>AAVE</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">86.1100</td>
+<td class="z">85.8000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-15.34 %</td>
@@ -215,10 +215,10 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>ADA</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1319</td>
+<td class="z">0.1316</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-16.77 %</td>
+<td class="z">-16.78 %</td>
 </tr><tr>
 <td><b>ASML</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -231,18 +231,18 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>ATOM</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1.1448</td>
+<td class="z">1.1411</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-13.86 %</td>
+<td class="z">-13.87 %</td>
 </tr><tr>
 <td><b>AVAX</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">6.0170</td>
+<td class="z">5.9920</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-12.99 %</td>
+<td class="z">-13.00 %</td>
 </tr><tr>
 <td><b>Airbus</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -271,7 +271,7 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>BCH</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">179.9400</td>
+<td class="z">180.2600</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-13.51 %</td>
@@ -279,23 +279,23 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>BTC</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">54730.4000</td>
+<td class="z">54520.0000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-10.00 %</td>
+<td class="z">-10.01 %</td>
 </tr><tr>
 <td><b>DOGE</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.0505</td>
+<td class="z">0.0504</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-13.97 %</td>
+<td class="z">-13.98 %</td>
 </tr><tr>
 <td><b>DOT</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.5958</td>
+<td class="z">0.5949</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-18.95 %</td>
@@ -303,34 +303,34 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>ETH</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1536.3500</td>
+<td class="z">1529.9700</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-12.62 %</td>
+<td class="z">-12.63 %</td>
 </tr><tr>
 <td><b>FIL</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.4900</td>
+<td class="z">0.4880</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-23.59 %</td>
+<td class="z">-23.60 %</td>
 </tr><tr>
 <td><b>LINK</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">8.0822</td>
+<td class="z">8.0702</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-12.65 %</td>
+<td class="z">-12.66 %</td>
 </tr><tr>
 <td><b>LTC</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">37.3900</td>
+<td class="z">37.2000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-13.69 %</td>
+<td class="z">-13.70 %</td>
 </tr><tr>
 <td><b>LVMH</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -359,10 +359,10 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>SOL</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">63.8300</td>
+<td class="z">63.6600</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-15.78 %</td>
+<td class="z">-15.79 %</td>
 </tr><tr>
 <td><b>Siemens</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -375,15 +375,15 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>UNI</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">4.3109</td>
+<td class="z">4.3267</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-13.78 %</td>
+<td class="z">-13.77 %</td>
 </tr><tr>
 <td><b>XLM</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1135</td>
+<td class="z">0.1134</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-13.71 %</td>
@@ -391,7 +391,7 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>XRP</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.8454</td>
+<td class="z">0.8442</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-14.75 %</td>
@@ -438,18 +438,18 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>AAVE</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">86.1100</td>
+<td class="z">85.8000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-12.92 %</td>
+<td class="z">-12.97 %</td>
 </tr><tr>
 <td><b>ADA</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1319</td>
+<td class="z">0.1316</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-9.37 %</td>
+<td class="z">-9.40 %</td>
 </tr><tr>
 <td><b>ASML</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -462,18 +462,18 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>ATOM</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1.1448</td>
+<td class="z">1.1411</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-6.36 %</td>
+<td class="z">-6.44 %</td>
 </tr><tr>
 <td><b>AVAX</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">6.0170</td>
+<td class="z">5.9920</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-11.17 %</td>
+<td class="z">-11.22 %</td>
 </tr><tr>
 <td><b>Airbus</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -502,66 +502,66 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>BCH</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">179.9400</td>
+<td class="z">180.2600</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-9.17 %</td>
+<td class="z">-9.14 %</td>
 </tr><tr>
 <td><b>BTC</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">54730.4000</td>
+<td class="z">54520.0000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-9.89 %</td>
+<td class="z">-9.95 %</td>
 </tr><tr>
 <td><b>DOGE</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.0505</td>
+<td class="z">0.0504</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-10.64 %</td>
+<td class="z">-10.67 %</td>
 </tr><tr>
 <td><b>DOT</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.5958</td>
+<td class="z">0.5949</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-13.50 %</td>
+<td class="z">-13.52 %</td>
 </tr><tr>
 <td><b>ETH</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1536.3500</td>
+<td class="z">1529.9700</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-11.05 %</td>
+<td class="z">-11.11 %</td>
 </tr><tr>
 <td><b>FIL</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.4900</td>
+<td class="z">0.4880</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-17.64 %</td>
+<td class="z">-17.69 %</td>
 </tr><tr>
 <td><b>LINK</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">8.0822</td>
+<td class="z">8.0702</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-8.02 %</td>
+<td class="z">-8.04 %</td>
 </tr><tr>
 <td><b>LTC</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">37.3900</td>
+<td class="z">37.2000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-11.65 %</td>
+<td class="z">-11.72 %</td>
 </tr><tr>
 <td><b>LVMH</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -590,10 +590,10 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>SOL</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">63.8300</td>
+<td class="z">63.6600</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-8.81 %</td>
+<td class="z">-8.84 %</td>
 </tr><tr>
 <td><b>Siemens</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -606,26 +606,26 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>UNI</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">4.3109</td>
+<td class="z">4.3267</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-16.51 %</td>
+<td class="z">-16.46 %</td>
 </tr><tr>
 <td><b>XLM</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1135</td>
+<td class="z">0.1134</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-8.05 %</td>
+<td class="z">-8.06 %</td>
 </tr><tr>
 <td><b>XRP</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.8454</td>
+<td class="z">0.8442</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-7.85 %</td>
+<td class="z">-7.87 %</td>
 </tr></tbody></table></div>
 <details><summary>Trades anzeigen (2)</summary>
 <div class="rolle" style="margin-top:8px"><table>
@@ -649,18 +649,18 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>AAVE</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">86.1100</td>
+<td class="z">85.8000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.47 %</td>
+<td class="z">+0.60 %</td>
 </tr><tr>
 <td><b>ADA</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1319</td>
+<td class="z">0.1316</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-0.02 %</td>
+<td class="z">+0.09 %</td>
 </tr><tr>
 <td><b>ASML</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -673,18 +673,18 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>ATOM</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1.1448</td>
+<td class="z">1.1411</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-0.04 %</td>
+<td class="z">-0.16 %</td>
 </tr><tr>
 <td><b>AVAX</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">6.0170</td>
+<td class="z">5.9920</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.27 %</td>
+<td class="z">+0.33 %</td>
 </tr><tr>
 <td><b>Airbus</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -713,66 +713,66 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>BCH</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">179.9400</td>
+<td class="z">180.2600</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.43 %</td>
+<td class="z">+0.61 %</td>
 </tr><tr>
 <td><b>BTC</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">54730.4000</td>
+<td class="z">54520.0000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.16 %</td>
+<td class="z">+0.20 %</td>
 </tr><tr>
 <td><b>DOGE</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.0505</td>
+<td class="z">0.0504</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.11 %</td>
+<td class="z">+0.15 %</td>
 </tr><tr>
 <td><b>DOT</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.5958</td>
+<td class="z">0.5949</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-0.22 %</td>
+<td class="z">-0.06 %</td>
 </tr><tr>
 <td><b>ETH</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1536.3500</td>
+<td class="z">1529.9700</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.22 %</td>
+<td class="z">+0.25 %</td>
 </tr><tr>
 <td><b>FIL</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.4900</td>
+<td class="z">0.4880</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-0.21 %</td>
+<td class="z">-0.28 %</td>
 </tr><tr>
 <td><b>LINK</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">8.0822</td>
+<td class="z">8.0702</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-0.03 %</td>
+<td class="z">+0.13 %</td>
 </tr><tr>
 <td><b>LTC</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">37.3900</td>
+<td class="z">37.2000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.04 %</td>
+<td class="z">+0.13 %</td>
 </tr><tr>
 <td><b>LVMH</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -801,10 +801,10 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>SOL</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">63.8300</td>
+<td class="z">63.6600</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.36 %</td>
+<td class="z">+0.51 %</td>
 </tr><tr>
 <td><b>Siemens</b></td>
 <td><span class="typ aktie">Aktie</span></td>
@@ -817,26 +817,26 @@ svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidd
 <td><b>UNI</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">4.3109</td>
+<td class="z">4.3267</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.05 %</td>
+<td class="z">+0.22 %</td>
 </tr><tr>
 <td><b>XLM</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1135</td>
+<td class="z">0.1134</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.15 %</td>
+<td class="z">+0.21 %</td>
 </tr><tr>
 <td><b>XRP</b></td>
 <td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.8454</td>
+<td class="z">0.8442</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">+0.26 %</td>
+<td class="z">+0.35 %</td>
 </tr></tbody></table></div>
 <details><summary>Trades anzeigen (0)</summary>
 <div class="rolle" style="margin-top:8px"><table>
