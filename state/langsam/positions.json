@@ -11,6 +11,30 @@
     "einstiegszeit": null,
     "menge": 0.0
   },
+  "AIR.PA": {
+    "bargeld": 0.0,
+    "einstieg": 193.67999267578125,
+    "einstiegszeit": "2026-11-24T23:07:41+00:00",
+    "menge": 0.5149731710645196
+  },
+  "ALV.DE": {
+    "bargeld": 0.0,
+    "einstieg": 455.70001220703125,
+    "einstiegszeit": "2026-11-24T23:07:41+00:00",
+    "menge": 0.2188720590919946
+  },
+  "APC.DE": {
+    "bargeld": 0.0,
+    "einstieg": 320.25,
+    "einstiegszeit": "2026-11-24T23:07:41+00:00",
+    "menge": 0.31144418423106945
+  },
+  "ASML.AS": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
   "ATOM/EUR": {
     "bargeld": 100.0,
     "einstieg": 0.0,
@@ -70,6 +94,30 @@
     "einstieg": 0.0,
     "einstiegszeit": null,
     "menge": 0.0
+  },
+  "MC.PA": {
+    "bargeld": 0.0,
+    "einstieg": 395.29998779296875,
+    "einstiegszeit": "2026-11-24T23:07:41+00:00",
+    "menge": 0.2523147054895358
+  },
+  "MSF.DE": {
+    "bargeld": 0.0,
+    "einstieg": 452.0,
+    "einstiegszeit": "2026-11-24T23:07:41+00:00",
+    "menge": 0.22066371681415928
+  },
+  "SAP.DE": {
+    "bargeld": 0.0,
+    "einstieg": 189.32000732421875,
+    "einstiegszeit": "2026-11-24T23:07:41+00:00",
+    "menge": 0.5268328551730452
+  },
+  "SIE.DE": {
+    "bargeld": 0.0,
+    "einstieg": 255.0500030517578,
+    "einstiegszeit": "2026-11-24T23:07:41+00:00",
+    "menge": 0.3910605716784075
   },
   "SOL/EUR": {
     "bargeld": 100.0,

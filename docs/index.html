@@ -6,8 +6,7 @@
 <meta http-equiv="refresh" content="300">
 <title>Trading-Bot</title>
 <style>
-:root {
-  color-scheme: light dark;
+:root { color-scheme: light dark;
   --surface: #fcfcfb;
   --plane: #f9f9f7;
   --ink: #0b0b0b;
@@ -20,6 +19,7 @@
   --rand: rgba(11,11,11,0.10);
   --serie1: #2a78d6;
   --serie2: #eb6834;
+  --serie3: #1baf7a;
 }
 @media (prefers-color-scheme: dark) { :root {
     --surface: #1a1a19;
@@ -34,18 +34,19 @@
     --rand: rgba(255,255,255,0.10);
     --serie1: #3987e5;
     --serie2: #d95926;
+    --serie3: #199e70;
 } }
-* { box-sizing: border-box; }
+* { box-sizing:border-box; }
 body { margin:0; padding:20px 16px 64px; background:var(--plane); color:var(--ink);
   font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
-.huelle { max-width:1040px; margin:0 auto; }
+.huelle { max-width:1100px; margin:0 auto; }
 h1 { font-size:20px; margin:0; letter-spacing:-0.01em; }
 h2 { font-size:15px; margin:34px 0 10px; color:var(--ink2); font-weight:600;
   display:flex; align-items:center; gap:8px; }
 .punktfarbe { width:10px; height:10px; border-radius:3px; display:inline-block; }
 .kopf { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
 .unter { color:var(--muted); font-size:13px; margin:4px 0 22px; }
-.karten { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+.karten { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
 .karte { background:var(--surface); border:1px solid var(--rand); border-radius:10px;
   padding:14px 16px; }
 .karte .titel { font-size:12px; color:var(--muted); margin-bottom:6px;
@@ -80,7 +81,7 @@ h2 { font-size:15px; margin:34px 0 10px; color:var(--ink2); font-weight:600;
 .tipp .tt { color:var(--muted); font-size:12px; margin-bottom:4px; }
 .tipp .tz { display:flex; align-items:center; gap:6px; }
 .tipp .tz i { width:10px; height:3px; border-radius:2px; display:inline-block; }
-.tipp .tz b { margin-left:auto; padding-left:12px; }
+.tipp .tz b { margin-left:auto; padding-left:14px; }
 .rolle { overflow-x:auto; background:var(--surface); border:1px solid var(--rand);
   border-radius:10px; }
 table { width:100%; border-collapse:collapse; font-size:14px; }
@@ -96,6 +97,7 @@ tr:last-child td { border-bottom:none; }
   color:var(--serie1); }
 .marke.warn { background:color-mix(in oklab,var(--schlecht) 16%,transparent);
   color:var(--schlecht); }
+.typ { font-size:12px; color:var(--muted); }
 .hinweis { color:var(--muted); background:var(--surface); border:1px solid var(--rand);
   border-radius:10px; padding:20px; margin:0; font-size:14px; }
 details { margin-top:10px; }
@@ -108,80 +110,182 @@ footer { margin-top:36px; color:var(--muted); font-size:12px; }
 
 <div class="kopf">
   <h1>Trading-Bot</h1>
-  <span class="marke offen">vor 0 min</span>
+  <span class="marke offen">vor 1 min</span>
   
 </div>
-<p class="unter">Papier-Depot, kein echtes Geld &middot; zwei Strategien im Vergleich
-  &middot; Stand 24.11. 22:53 UTC</p>
+<p class="unter">Papier-Depot, kein echtes Geld &middot; drei Strategien im Vergleich
+  &middot; 16 Kryptowaehrungen und 8 Aktien
+  &middot; Stand 24.11. 23:07 UTC</p>
 
 <div class="karten">
 <div class="karte" style="border-left:3px solid var(--serie1)">
   <div class="titel">Langsam MA20/50</div>
-  <div class="wert">1 600.00 &euro;</div>
-  <div class="neben ">+0.00 &euro; &middot; +0.00 %</div>
-  <div class="neben">0/16 investiert &middot; 0 Trades
-    &middot; Treffer -</div>
+  <div class="wert">2 398.18 &euro;</div>
+  <div class="neben schlecht">-1.82 &euro; &middot; -0.08 %</div>
+  <div class="neben">7/24 investiert &middot; 7 Trades
+    &middot; Treffer - &middot; Schnitt -</div>
+  <div class="neben" style="color:var(--muted)">Tageskerzen
+    &middot; Stop-Loss 8 %</div>
 </div>
 <div class="karte" style="border-left:3px solid var(--serie2)">
   <div class="titel">Schnell MA5/20</div>
-  <div class="wert">1 600.00 &euro;</div>
+  <div class="wert">2 399.48 &euro;</div>
+  <div class="neben schlecht">-0.52 &euro; &middot; -0.02 %</div>
+  <div class="neben">2/24 investiert &middot; 2 Trades
+    &middot; Treffer - &middot; Schnitt -</div>
+  <div class="neben" style="color:var(--muted)">Tageskerzen
+    &middot; Stop-Loss 8 %</div>
+</div>
+<div class="karte" style="border-left:3px solid var(--serie3)">
+  <div class="titel">Daytrader MA8/21</div>
+  <div class="wert">2 400.00 &euro;</div>
   <div class="neben ">+0.00 &euro; &middot; +0.00 %</div>
-  <div class="neben">0/16 investiert &middot; 0 Trades
-    &middot; Treffer -</div>
+  <div class="neben">0/24 investiert &middot; 0 Trades
+    &middot; Treffer - &middot; Schnitt -</div>
+  <div class="neben" style="color:var(--muted)">15-Minuten-Kerzen
+    &middot; Stop-Loss 3 %</div>
 </div></div>
 
 <h2>Vergleich der Depotwerte</h2>
-<p class="hinweis">Noch zu wenig Daten. Der Chart erscheint nach dem zweiten Durchlauf.</p>
+
+<div class="legende"><span class="le"><i style="background:var(--serie1)"></i>Langsam MA20/50</span> <span class="le"><i style="background:var(--serie2)"></i>Schnell MA5/20</span><span class="le gestrichelt">Startkapital</span></div>
+<div class="chartbox">
+  <svg viewBox="0 0 1000 340" class="chart" id="chart" role="img"
+       aria-label="Vergleich der Depotwerte aller Strategien in Euro">
+    <line x1="64" y1="306.0" x2="882" y2="306.0" class="gitter"/><text x="54" y="310.0" class="achse" text-anchor="end">1 520</text><line x1="64" y1="233.5" x2="882" y2="233.5" class="gitter"/><text x="54" y="237.5" class="achse" text-anchor="end">1 760</text><line x1="64" y1="161.0" x2="882" y2="161.0" class="gitter"/><text x="54" y="165.0" class="achse" text-anchor="end">2 000</text><line x1="64" y1="88.5" x2="882" y2="88.5" class="gitter"/><text x="54" y="92.5" class="achse" text-anchor="end">2 240</text><line x1="64" y1="16.0" x2="882" y2="16.0" class="gitter"/><text x="54" y="20.0" class="achse" text-anchor="end">2 480</text><line x1="64" y1="40.2" x2="882" y2="40.2" class="bezug"/><path d="M64.0,281.8 L882.0,40.7" class="linie" style="stroke:var(--serie1)"/><path d="M64.0,281.8 L882.0,40.3" class="linie" style="stroke:var(--serie2)"/><circle cx="882.0" cy="40.3" r="4" class="ende" style="fill:var(--serie2)"/><text x="891.0" y="44.3" class="endlabel" style="fill:var(--serie2)">Schnell</text><circle cx="882.0" cy="40.7" r="4" class="ende" style="fill:var(--serie1)"/><text x="891.0" y="59.3" class="endlabel" style="fill:var(--serie1)">Langsam</text>
+    <line x1="64" y1="306" x2="882" y2="306" class="basis"/>
+    <text x="64.0" y="328" class="achse" text-anchor="start">24.11. 22:53</text><text x="882.0" y="328" class="achse" text-anchor="end">24.11. 23:07</text><text x="882.0" y="328" class="achse" text-anchor="end">24.11. 23:07</text>
+    <g id="fokus" style="display:none"><line y1="16" y2="306" class="kreuz"/></g>
+    <rect x="64" y="16" width="818" height="290" fill="transparent" id="feld"/>
+  </svg>
+  <div id="tipp" class="tipp" hidden></div>
+</div>
+<script>
+const reihen = [{"name": "Langsam MA20/50", "farbe": "serie1", "punkte": [["24.11. 22:53", 1600.0, 64.0, 281.8], ["24.11. 23:07", 2398.18, 882.0, 40.7]]}, {"name": "Schnell MA5/20", "farbe": "serie2", "punkte": [["24.11. 22:53", 1600.0, 64.0, 281.8], ["24.11. 23:07", 2399.48, 882.0, 40.3]]}];
+const svg = document.getElementById('chart');
+const feld = document.getElementById('feld');
+const fokus = document.getElementById('fokus');
+const kreuz = fokus.querySelector('line');
+const tipp = document.getElementById('tipp');
+function zeigen(evt) {
+  const kasten = svg.getBoundingClientRect();
+  const sx = (evt.clientX - kasten.left) / kasten.width * 1000;
+  let zeilen = '', zeitpunkt = '', bx = null;
+  reihen.forEach(r => {
+    let best = 0, ab = Infinity;
+    r.punkte.forEach((p, i) => { const d = Math.abs(p[2] - sx);
+      if (d < ab) { ab = d; best = i; } });
+    const p = r.punkte[best];
+    zeitpunkt = p[0];
+    if (bx === null) bx = p[2];
+    zeilen += '<div class="tz"><i style="background:var(--' + r.farbe + ')"></i>' +
+      r.name + '<b>' + p[1].toLocaleString('de-DE',
+      {minimumFractionDigits:2, maximumFractionDigits:2}) + ' &euro;</b></div>';
+  });
+  if (bx === null) return;
+  kreuz.setAttribute('x1', bx); kreuz.setAttribute('x2', bx);
+  fokus.style.display = '';
+  tipp.hidden = false;
+  tipp.innerHTML = '<div class="tt">' + zeitpunkt + '</div>' + zeilen;
+  const px = kasten.left + bx / 1000 * kasten.width;
+  tipp.style.left = Math.min(Math.max(px - 90, 4),
+    window.innerWidth - tipp.offsetWidth - 8) + 'px';
+  tipp.style.top = (kasten.top + window.scrollY + 20) + 'px';
+}
+feld.addEventListener('mousemove', zeigen);
+feld.addEventListener('touchmove', e => { zeigen(e.touches[0]); e.preventDefault(); });
+svg.addEventListener('mouseleave', () => { fokus.style.display='none'; tipp.hidden=true; });
+</script>
+
 
 
 <h2><span class="punktfarbe" style="background:var(--serie1)"></span>Langsam MA20/50</h2>
 <div class="rolle"><table>
-<thead><tr><th>Markt</th><th>Status</th><th class="z">Kurs</th><th class="z">G/V</th>
-<th class="z">Wert &euro;</th><th class="z">Abstand MA</th></tr></thead>
+<thead><tr><th>Wert</th><th>Art</th><th>Status</th><th class="z">Kurs</th>
+<th class="z">G/V</th><th class="z">Wert &euro;</th><th class="z">Abstand MA</th></tr></thead>
 <tbody><tr>
 <td><b>AAVE</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">86.2300</td>
+<td class="z">86.1100</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-15.33 %</td>
+<td class="z">-15.34 %</td>
 </tr><tr>
 <td><b>ADA</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1320</td>
+<td class="z">0.1319</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-16.77 %</td>
 </tr><tr>
-<td><b>ATOM</b></td>
+<td><b>ASML</b></td>
+<td><span class="typ aktie">Aktie</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1.1422</td>
+<td class="z">1198.8000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-13.87 %</td>
+<td class="z">-7.10 %</td>
+</tr><tr>
+<td><b>ATOM</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">1.1448</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-13.86 %</td>
 </tr><tr>
 <td><b>AVAX</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">6.0190</td>
+<td class="z">6.0170</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-12.99 %</td>
 </tr><tr>
+<td><b>Airbus</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">193.6800</td>
+<td class="z gut">+0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+2.17 %</td>
+</tr><tr>
+<td><b>Allianz</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">455.7000</td>
+<td class="z gut">+0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+3.84 %</td>
+</tr><tr>
+<td><b>Apple</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">320.2500</td>
+<td class="z ">+0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+2.90 %</td>
+</tr><tr>
 <td><b>BCH</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">180.0200</td>
+<td class="z">179.9400</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-13.51 %</td>
 </tr><tr>
 <td><b>BTC</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">54685.6000</td>
+<td class="z">54730.4000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-10.01 %</td>
+<td class="z">-10.00 %</td>
 </tr><tr>
 <td><b>DOGE</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
 <td class="z">0.0505</td>
 <td class="z ">-</td>
@@ -189,48 +293,87 @@ footer { margin-top:36px; color:var(--muted); font-size:12px; }
 <td class="z">-13.97 %</td>
 </tr><tr>
 <td><b>DOT</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.5965</td>
+<td class="z">0.5958</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-18.94 %</td>
+<td class="z">-18.95 %</td>
 </tr><tr>
 <td><b>ETH</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1536.3400</td>
+<td class="z">1536.3500</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-12.62 %</td>
 </tr><tr>
 <td><b>FIL</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.4930</td>
+<td class="z">0.4900</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-23.58 %</td>
+<td class="z">-23.59 %</td>
 </tr><tr>
 <td><b>LINK</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">8.0825</td>
+<td class="z">8.0822</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-12.65 %</td>
 </tr><tr>
 <td><b>LTC</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">37.3300</td>
+<td class="z">37.3900</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-13.69 %</td>
 </tr><tr>
+<td><b>LVMH</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">395.3000</td>
+<td class="z schlecht">-0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+0.79 %</td>
+</tr><tr>
+<td><b>Microsoft</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">452.0000</td>
+<td class="z ">+0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+1.57 %</td>
+</tr><tr>
+<td><b>SAP</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">189.3200</td>
+<td class="z schlecht">-0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+4.24 %</td>
+</tr><tr>
 <td><b>SOL</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">63.7800</td>
+<td class="z">63.8300</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-15.78 %</td>
 </tr><tr>
+<td><b>Siemens</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">255.0500</td>
+<td class="z schlecht">-0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+0.02 %</td>
+</tr><tr>
 <td><b>UNI</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
 <td class="z">4.3109</td>
 <td class="z ">-</td>
@@ -238,73 +381,142 @@ footer { margin-top:36px; color:var(--muted); font-size:12px; }
 <td class="z">-13.78 %</td>
 </tr><tr>
 <td><b>XLM</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1137</td>
+<td class="z">0.1135</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-13.71 %</td>
 </tr><tr>
 <td><b>XRP</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.8437</td>
+<td class="z">0.8454</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-14.75 %</td>
 </tr></tbody></table></div>
-<details><summary>Trades anzeigen (0)</summary>
+<details><summary>Trades anzeigen (7)</summary>
 <div class="rolle" style="margin-top:8px"><table>
-<thead><tr><th>Zeit</th><th>Markt</th><th>Typ</th><th class="z">Kurs</th>
+<thead><tr><th>Zeit</th><th>Wert</th><th>Typ</th><th class="z">Kurs</th>
 <th class="z">G/V</th><th>Grund</th></tr></thead>
-<tbody><tr><td colspan="6" style="color:var(--muted)">Noch keine Trades.</td></tr></tbody></table></div></details>
+<tbody><tr>
+<td>24.11. 23:07</td><td><b>Microsoft</b></td><td>Kauf</td>
+<td class="z">452.0000</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr><tr>
+<td>24.11. 23:07</td><td><b>Apple</b></td><td>Kauf</td>
+<td class="z">320.2500</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr><tr>
+<td>24.11. 23:07</td><td><b>Airbus</b></td><td>Kauf</td>
+<td class="z">193.6800</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr><tr>
+<td>24.11. 23:07</td><td><b>LVMH</b></td><td>Kauf</td>
+<td class="z">395.3000</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr><tr>
+<td>24.11. 23:07</td><td><b>Allianz</b></td><td>Kauf</td>
+<td class="z">455.7000</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr><tr>
+<td>24.11. 23:07</td><td><b>Siemens</b></td><td>Kauf</td>
+<td class="z">255.0500</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr><tr>
+<td>24.11. 23:07</td><td><b>SAP</b></td><td>Kauf</td>
+<td class="z">189.3200</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr></tbody></table></div></details>
 
 <h2><span class="punktfarbe" style="background:var(--serie2)"></span>Schnell MA5/20</h2>
 <div class="rolle"><table>
-<thead><tr><th>Markt</th><th>Status</th><th class="z">Kurs</th><th class="z">G/V</th>
-<th class="z">Wert &euro;</th><th class="z">Abstand MA</th></tr></thead>
+<thead><tr><th>Wert</th><th>Art</th><th>Status</th><th class="z">Kurs</th>
+<th class="z">G/V</th><th class="z">Wert &euro;</th><th class="z">Abstand MA</th></tr></thead>
 <tbody><tr>
 <td><b>AAVE</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">86.2300</td>
+<td class="z">86.1100</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-12.90 %</td>
+<td class="z">-12.92 %</td>
 </tr><tr>
 <td><b>ADA</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1320</td>
+<td class="z">0.1319</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-9.35 %</td>
+<td class="z">-9.37 %</td>
+</tr><tr>
+<td><b>ASML</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">1198.8000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-7.41 %</td>
 </tr><tr>
 <td><b>ATOM</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1.1422</td>
+<td class="z">1.1448</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-6.39 %</td>
+<td class="z">-6.36 %</td>
 </tr><tr>
 <td><b>AVAX</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">6.0190</td>
+<td class="z">6.0170</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-11.16 %</td>
+<td class="z">-11.17 %</td>
+</tr><tr>
+<td><b>Airbus</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">193.6800</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-1.36 %</td>
+</tr><tr>
+<td><b>Allianz</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">455.7000</td>
+<td class="z gut">+0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+0.77 %</td>
+</tr><tr>
+<td><b>Apple</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke offen">investiert</span></td>
+<td class="z">320.2500</td>
+<td class="z ">+0.00 %</td>
+<td class="z">99.74</td>
+<td class="z">+1.57 %</td>
 </tr><tr>
 <td><b>BCH</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">180.0200</td>
+<td class="z">179.9400</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-9.16 %</td>
+<td class="z">-9.17 %</td>
 </tr><tr>
 <td><b>BTC</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">54685.6000</td>
+<td class="z">54730.4000</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-9.90 %</td>
+<td class="z">-9.89 %</td>
 </tr><tr>
 <td><b>DOGE</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
 <td class="z">0.0505</td>
 <td class="z ">-</td>
@@ -312,48 +524,87 @@ footer { margin-top:36px; color:var(--muted); font-size:12px; }
 <td class="z">-10.64 %</td>
 </tr><tr>
 <td><b>DOT</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.5965</td>
+<td class="z">0.5958</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-13.48 %</td>
+<td class="z">-13.50 %</td>
 </tr><tr>
 <td><b>ETH</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">1536.3400</td>
+<td class="z">1536.3500</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-11.05 %</td>
 </tr><tr>
 <td><b>FIL</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.4930</td>
+<td class="z">0.4900</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-17.56 %</td>
+<td class="z">-17.64 %</td>
 </tr><tr>
 <td><b>LINK</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">8.0825</td>
+<td class="z">8.0822</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
 <td class="z">-8.02 %</td>
 </tr><tr>
 <td><b>LTC</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">37.3300</td>
+<td class="z">37.3900</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-11.67 %</td>
+<td class="z">-11.65 %</td>
+</tr><tr>
+<td><b>LVMH</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">395.3000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-2.14 %</td>
+</tr><tr>
+<td><b>Microsoft</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">452.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-3.03 %</td>
+</tr><tr>
+<td><b>SAP</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">189.3200</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-7.68 %</td>
 </tr><tr>
 <td><b>SOL</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">63.7800</td>
+<td class="z">63.8300</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-8.82 %</td>
+<td class="z">-8.81 %</td>
+</tr><tr>
+<td><b>Siemens</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">255.0500</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-2.11 %</td>
 </tr><tr>
 <td><b>UNI</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
 <td class="z">4.3109</td>
 <td class="z ">-</td>
@@ -361,30 +612,245 @@ footer { margin-top:36px; color:var(--muted); font-size:12px; }
 <td class="z">-16.51 %</td>
 </tr><tr>
 <td><b>XLM</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.1137</td>
+<td class="z">0.1135</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-8.02 %</td>
+<td class="z">-8.05 %</td>
 </tr><tr>
 <td><b>XRP</b></td>
+<td><span class="typ krypto">Krypto</span></td>
 <td><span class="marke">Bargeld</span></td>
-<td class="z">0.8437</td>
+<td class="z">0.8454</td>
 <td class="z ">-</td>
 <td class="z">100.00</td>
-<td class="z">-7.88 %</td>
+<td class="z">-7.85 %</td>
+</tr></tbody></table></div>
+<details><summary>Trades anzeigen (2)</summary>
+<div class="rolle" style="margin-top:8px"><table>
+<thead><tr><th>Zeit</th><th>Wert</th><th>Typ</th><th class="z">Kurs</th>
+<th class="z">G/V</th><th>Grund</th></tr></thead>
+<tbody><tr>
+<td>24.11. 23:07</td><td><b>Apple</b></td><td>Kauf</td>
+<td class="z">320.2500</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr><tr>
+<td>24.11. 23:07</td><td><b>Allianz</b></td><td>Kauf</td>
+<td class="z">455.7000</td>
+<td class="z ">-</td>
+<td>MA-Signal</td></tr></tbody></table></div></details>
+
+<h2><span class="punktfarbe" style="background:var(--serie3)"></span>Daytrader MA8/21</h2>
+<div class="rolle"><table>
+<thead><tr><th>Wert</th><th>Art</th><th>Status</th><th class="z">Kurs</th>
+<th class="z">G/V</th><th class="z">Wert &euro;</th><th class="z">Abstand MA</th></tr></thead>
+<tbody><tr>
+<td><b>AAVE</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">86.1100</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.47 %</td>
+</tr><tr>
+<td><b>ADA</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.1319</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.02 %</td>
+</tr><tr>
+<td><b>ASML</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">1198.8000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-1.06 %</td>
+</tr><tr>
+<td><b>ATOM</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">1.1448</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.04 %</td>
+</tr><tr>
+<td><b>AVAX</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">6.0170</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.27 %</td>
+</tr><tr>
+<td><b>Airbus</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">193.6800</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.17 %</td>
+</tr><tr>
+<td><b>Allianz</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">455.7000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.00 %</td>
+</tr><tr>
+<td><b>Apple</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">320.2500</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.53 %</td>
+</tr><tr>
+<td><b>BCH</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">179.9400</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.43 %</td>
+</tr><tr>
+<td><b>BTC</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">54730.4000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.16 %</td>
+</tr><tr>
+<td><b>DOGE</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.0505</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.11 %</td>
+</tr><tr>
+<td><b>DOT</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.5958</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.22 %</td>
+</tr><tr>
+<td><b>ETH</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">1536.3500</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.22 %</td>
+</tr><tr>
+<td><b>FIL</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.4900</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.21 %</td>
+</tr><tr>
+<td><b>LINK</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">8.0822</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.03 %</td>
+</tr><tr>
+<td><b>LTC</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">37.3900</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.04 %</td>
+</tr><tr>
+<td><b>LVMH</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">395.3000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.71 %</td>
+</tr><tr>
+<td><b>Microsoft</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">452.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.50 %</td>
+</tr><tr>
+<td><b>SAP</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">189.3200</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+1.42 %</td>
+</tr><tr>
+<td><b>SOL</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">63.8300</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.36 %</td>
+</tr><tr>
+<td><b>Siemens</b></td>
+<td><span class="typ aktie">Aktie</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">255.0500</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-0.80 %</td>
+</tr><tr>
+<td><b>UNI</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">4.3109</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.05 %</td>
+</tr><tr>
+<td><b>XLM</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.1135</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.15 %</td>
+</tr><tr>
+<td><b>XRP</b></td>
+<td><span class="typ krypto">Krypto</span></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.8454</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">+0.26 %</td>
 </tr></tbody></table></div>
 <details><summary>Trades anzeigen (0)</summary>
 <div class="rolle" style="margin-top:8px"><table>
-<thead><tr><th>Zeit</th><th>Markt</th><th>Typ</th><th class="z">Kurs</th>
+<thead><tr><th>Zeit</th><th>Wert</th><th>Typ</th><th class="z">Kurs</th>
 <th class="z">G/V</th><th>Grund</th></tr></thead>
 <tbody><tr><td colspan="6" style="color:var(--muted)">Noch keine Trades.</td></tr></tbody></table></div></details>
 
 
 <footer>
-  Stop-Loss 8 % &middot;
-  Take-Profit aus
-  &middot; Gebuehr 0.26 % &middot; 16 Maerkte<br>
+  Gebuehr 0.26 % je Trade &middot; 24 Werte
+  &middot; Aktienkurse von Yahoo Finance, Kryptokurse von Kraken<br>
+  Der Daytrader stellt abends glatt: Aktien 16:15 UTC,
+  Krypto 21:45 UTC.
+  Ausserhalb der Boersenzeiten werden Aktien nicht gehandelt.<br>
   Seite aktualisiert sich alle 5 Minuten selbst.
   Einstellungen in <code>config.yaml</code> im Repository.
 </footer>
