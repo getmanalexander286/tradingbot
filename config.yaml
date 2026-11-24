@@ -1,16 +1,24 @@
-# Einstellungen. Aenderungen hier wirken beim naechsten Durchlauf.
-# Bearbeiten: auf GitHub die Datei oeffnen, Stift-Symbol, speichern.
+# Einstellungen. Aenderungen wirken beim naechsten Durchlauf.
+# Bearbeiten: Datei auf GitHub oeffnen, Stift-Symbol, speichern.
 
 aktiv: true              # false = beobachtet nur, handelt nicht
 
-startkapital: 1600.0     # EUR, gleichmaessig auf die Maerkte verteilt
+startkapital: 1600.0     # EUR je Strategie, gleichmaessig auf die Maerkte verteilt
 gebuehr: 0.0026          # 0,26 % pro Trade
-
-ma_schnell: 20           # Tage
-ma_langsam: 50           # Tage
-
 stop_loss: 0.08          # Notverkauf bei 8 % Verlust
 take_profit: 0.0         # 0 = aus
+
+# Beide Strategien laufen gleichzeitig auf denselben Kursen,
+# jede mit eigenem Depot. So sieht man, welche besser funktioniert.
+strategien:
+  - name: Langsam MA20/50
+    kuerzel: langsam
+    ma_schnell: 20
+    ma_langsam: 50
+  - name: Schnell MA5/20
+    kuerzel: schnell
+    ma_schnell: 5
+    ma_langsam: 20
 
 maerkte:
   - BTC/EUR

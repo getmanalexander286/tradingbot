@@ -9,13 +9,26 @@ getan *hätte*.
 GitHub führt `trader.py` alle 5 Minuten aus. Jeder Durchlauf:
 
 1. holt die aktuellen Kurse von Kraken
-2. berechnet die gleitenden Durchschnitte (MA20 / MA50)
-3. entscheidet pro Markt: kaufen, verkaufen, halten
+2. berechnet die gleitenden Durchschnitte für **beide Strategien**
+3. entscheidet pro Strategie und Markt: kaufen, verkaufen, halten
 4. prüft Stop-Loss und Take-Profit
 5. schreibt den neuen Stand nach `state/`
 6. erzeugt das Dashboard in `docs/index.html`
 
 Kein Server nötig, läuft auch wenn alle eigenen Geräte aus sind.
+
+## Zwei Strategien im Vergleich
+
+Beide laufen gleichzeitig auf denselben Kursen, jede mit eigenem Depot von
+1.600 €. Dadurch lässt sich direkt ablesen, welche besser abschneidet.
+
+| Strategie | Durchschnitte | Verhalten |
+|---|---|---|
+| **Langsam** | MA20 / MA50 | wenige Signale, träge, geringe Gebühren |
+| **Schnell** | MA5 / MA20 | viele Signale, reagiert früh, hohe Gebühren |
+
+Erwartung: Die schnelle Strategie handelt deutlich öfter. Ob das hilft oder
+nur Gebühren kostet, zeigt der Vergleich nach ein paar Wochen.
 
 ## Dashboard
 
@@ -32,7 +45,7 @@ Wirkt beim nächsten Durchlauf.
 |---|---|
 | `aktiv` | `false` = beobachtet nur, handelt nicht. Stop-Loss greift weiter. |
 | `startkapital` | wird gleichmäßig auf die Märkte verteilt |
-| `ma_schnell` / `ma_langsam` | Länge der Durchschnitte in Tagen |
+| `strategien` | Name, Kürzel und MA-Längen je Strategie |
 | `stop_loss` | `0.08` = Notverkauf bei 8 % Verlust |
 | `take_profit` | `0` = aus. `0.2` = Gewinnmitnahme bei +20 % |
 | `maerkte` | welche Paare gehandelt werden |
@@ -44,19 +57,18 @@ Wirkt beim nächsten Durchlauf.
 
 ## Zurücksetzen
 
-Dateien in `state/` löschen. Beim nächsten Durchlauf fängt das Depot
-mit dem Startkapital neu an.
+Den Ordner `state/` löschen (oder nur den einer Strategie). Beim nächsten
+Durchlauf fängt das betroffene Depot mit dem Startkapital neu an.
 
 ## Dateien
 
 | Datei | Zweck |
 |---|---|
-| `trader.py` | ein Durchlauf: Kurse holen, entscheiden, Stand speichern |
-| `build_dashboard.py` | erzeugt `docs/index.html` |
+| `trader.py` | ein Durchlauf für alle Strategien |
+| `build_dashboard.py` | erzeugt `docs/index.html` mit dem Vergleich |
 | `config.yaml` | alle Einstellungen |
-| `state/positions.json` | aktuelle Positionen und Bargeld |
-| `state/trades.csv` | alle Trades |
-| `state/history.csv` | Depotwert über Zeit |
+| `state/langsam/` | Positionen, Trades und Verlauf der langsamen Strategie |
+| `state/schnell/` | dasselbe für die schnelle Strategie |
 | `.github/workflows/bot.yml` | Zeitplan |
 
 ## Grenzen
