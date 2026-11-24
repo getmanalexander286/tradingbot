@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>Trading-Bot</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --surface: #fcfcfb;
+  --plane: #f9f9f7;
+  --ink: #0b0b0b;
+  --ink2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --serie: #2a78d6;
+  --gut: #006300;
+  --schlecht: #d03b3b;
+  --rand: rgba(11,11,11,0.10);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #1a1a19;
+    --plane: #0d0d0d;
+    --ink: #f0efec;
+    --ink2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --serie: #3987e5;
+    --gut: #0ca30c;
+    --schlecht: #e66767;
+    --rand: rgba(255,255,255,0.10);
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 20px 16px 64px;
+  background: var(--plane); color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.huelle { max-width: 1040px; margin: 0 auto; }
+h1 { font-size: 20px; margin: 0 0 2px; letter-spacing: -0.01em; }
+h2 { font-size: 15px; margin: 32px 0 10px; color: var(--ink2); font-weight: 600; }
+.kopf { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+         margin-bottom: 22px; }
+.kopf p { margin: 0; color: var(--muted); font-size: 13px; }
+.karten { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.karte { background: var(--surface); border: 1px solid var(--rand);
+          border-radius: 10px; padding: 14px 16px; }
+.karte .titel { font-size: 12px; color: var(--muted); margin-bottom: 6px;
+                 text-transform: uppercase; letter-spacing: 0.04em; }
+.karte .wert { font-size: 26px; font-weight: 600; letter-spacing: -0.02em;
+                font-variant-numeric: tabular-nums; }
+.karte .neben { font-size: 13px; color: var(--ink2); margin-top: 2px;
+                 font-variant-numeric: tabular-nums; }
+.gut { color: var(--gut); }
+.schlecht { color: var(--schlecht); }
+.chartbox { position: relative; background: var(--surface);
+             border: 1px solid var(--rand); border-radius: 10px; padding: 8px; }
+.chart { width: 100%; height: auto; display: block; touch-action: pan-y; }
+.gitter { stroke: var(--grid); stroke-width: 1; }
+.basis { stroke: var(--axis); stroke-width: 1; }
+.bezug { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 4; }
+.linie { fill: none; stroke: var(--serie); stroke-width: 2;
+          stroke-linejoin: round; stroke-linecap: round; }
+.flaeche { fill: var(--serie); opacity: 0.08; stroke: none; }
+.kreuz { stroke: var(--muted); stroke-width: 1; }
+.punkt { fill: var(--serie); stroke: var(--surface); stroke-width: 2; }
+.achse { fill: var(--muted); font-size: 12px;
+          font-family: system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+.tipp { position: absolute; background: var(--surface); color: var(--ink);
+         border: 1px solid var(--rand); border-radius: 8px; padding: 6px 10px;
+         font-size: 13px; pointer-events: none; white-space: nowrap;
+         box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+         font-variant-numeric: tabular-nums; z-index: 5; }
+.rolle { overflow-x: auto; background: var(--surface);
+          border: 1px solid var(--rand); border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-weight: 600; font-size: 12px; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.04em;
+      padding: 10px 12px; border-bottom: 1px solid var(--rand); white-space: nowrap; }
+td { padding: 9px 12px; border-bottom: 1px solid var(--rand); white-space: nowrap; }
+tr:last-child td { border-bottom: none; }
+.z { text-align: right; font-variant-numeric: tabular-nums; }
+.marke { font-size: 12px; padding: 2px 8px; border-radius: 99px;
+          background: var(--grid); color: var(--ink2); }
+.marke.offen { background: color-mix(in oklab, var(--serie) 16%, transparent);
+                color: var(--serie); }
+.marke.warn { background: color-mix(in oklab, var(--schlecht) 16%, transparent);
+               color: var(--schlecht); }
+.hinweis { color: var(--muted); background: var(--surface);
+            border: 1px solid var(--rand); border-radius: 10px;
+            padding: 20px; margin: 0; font-size: 14px; }
+footer { margin-top: 36px; color: var(--muted); font-size: 12px; }
+footer a { color: var(--ink2); }
+</style>
+</head>
+<body>
+<div class="huelle">
+
+<div class="kopf">
+  <h1>Trading-Bot</h1>
+  <span class="marke offen">vor 0 min</span>
+  
+</div>
+<p style="margin:-16px 0 22px;color:var(--muted);font-size:13px">
+  Papier-Depot, kein echtes Geld &middot; Stand 24.11. 22:42 UTC
+</p>
+
+<div class="karten">
+  <div class="karte">
+    <div class="titel">Depotwert</div>
+    <div class="wert">1 600.00 &euro;</div>
+    <div class="neben">Start 1 600.00 &euro;</div>
+  </div>
+  <div class="karte">
+    <div class="titel">Ergebnis</div>
+    <div class="wert ">+0.00 &euro;</div>
+    <div class="neben ">+0.00 %</div>
+  </div>
+  <div class="karte">
+    <div class="titel">Investiert</div>
+    <div class="wert">0 <span style="font-size:16px;color:var(--muted)">/ 16</span></div>
+    <div class="neben">Maerkte</div>
+  </div>
+  <div class="karte">
+    <div class="titel">Trades</div>
+    <div class="wert">0</div>
+    <div class="neben">davon 0 geschlossen</div>
+  </div>
+  <div class="karte">
+    <div class="titel">Trefferquote</div>
+    <div class="wert">-</div>
+    <div class="neben">Schnitt -</div>
+  </div>
+</div>
+
+<h2>Verlauf des Depotwerts</h2>
+<p class="hinweis">Noch zu wenig Daten fuer einen Verlauf. Der Chart erscheint nach dem zweiten Durchlauf.</p>
+
+<h2>Positionen</h2>
+<div class="rolle">
+<table>
+<thead><tr>
+<th>Markt</th><th>Status</th><th class="z">Kurs</th><th class="z">Einstieg</th>
+<th class="z">G/V</th><th class="z">Wert &euro;</th><th class="z">Abstand MA</th>
+</tr></thead>
+<tbody><tr>
+<td><b>AAVE</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">86.3900</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-15.33 %</td>
+</tr><tr>
+<td><b>ADA</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.1320</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-16.77 %</td>
+</tr><tr>
+<td><b>ATOM</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">1.1463</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-13.86 %</td>
+</tr><tr>
+<td><b>AVAX</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">6.0190</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-12.99 %</td>
+</tr><tr>
+<td><b>BCH</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">180.0200</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-13.51 %</td>
+</tr><tr>
+<td><b>BTC</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">54708.4000</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-10.00 %</td>
+</tr><tr>
+<td><b>DOGE</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.0505</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-13.97 %</td>
+</tr><tr>
+<td><b>DOT</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.5972</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-18.94 %</td>
+</tr><tr>
+<td><b>ETH</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">1536.9900</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-12.62 %</td>
+</tr><tr>
+<td><b>FIL</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.4910</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-23.59 %</td>
+</tr><tr>
+<td><b>LINK</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">8.0916</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-12.65 %</td>
+</tr><tr>
+<td><b>LTC</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">37.3600</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-13.69 %</td>
+</tr><tr>
+<td><b>SOL</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">63.7800</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-15.78 %</td>
+</tr><tr>
+<td><b>UNI</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">4.3157</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-13.78 %</td>
+</tr><tr>
+<td><b>XLM</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.1137</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-13.71 %</td>
+</tr><tr>
+<td><b>XRP</b></td>
+<td><span class="marke">Bargeld</span></td>
+<td class="z">0.8434</td>
+<td class="z">0.0000</td>
+<td class="z ">-</td>
+<td class="z">100.00</td>
+<td class="z">-14.75 %</td>
+</tr></tbody>
+</table>
+</div>
+<p style="color:var(--muted);font-size:13px;margin-top:8px">
+  <b>Abstand MA</b>: wie weit der schnelle Durchschnitt vom langsamen entfernt ist.
+  Negativ heisst noch kein Kaufsignal; bei 0 kreuzen sich die Linien.
+</p>
+
+<h2>Letzte Trades</h2>
+<div class="rolle">
+<table>
+<thead><tr>
+<th>Zeit</th><th>Markt</th><th>Typ</th><th class="z">Kurs</th>
+<th class="z">Wert &euro;</th><th class="z">G/V</th><th>Grund</th>
+</tr></thead>
+<tbody><tr><td colspan="7" style="color:var(--muted)">Noch keine Trades. Der Bot kauft erst, wenn der schnelle Durchschnitt den langsamen von unten nach oben kreuzt.</td></tr></tbody>
+</table>
+</div>
+
+<footer>
+  MA20/50 &middot;
+  Stop-Loss 8 % &middot;
+  Take-Profit aus &middot;
+  Gebuehr 0.26 %<br>
+  Seite aktualisiert sich alle 5 Minuten selbst. Einstellungen aenderst du in
+  <code>config.yaml</code> im Repository.
+</footer>
+
+</div>
+</body>
+</html>
