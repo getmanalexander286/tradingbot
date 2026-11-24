@@ -1,0 +1,31 @@
+# Einstellungen. Aenderungen hier wirken beim naechsten Durchlauf.
+# Bearbeiten: auf GitHub die Datei oeffnen, Stift-Symbol, speichern.
+
+aktiv: true              # false = beobachtet nur, handelt nicht
+
+startkapital: 1600.0     # EUR, gleichmaessig auf die Maerkte verteilt
+gebuehr: 0.0026          # 0,26 % pro Trade
+
+ma_schnell: 20           # Tage
+ma_langsam: 50           # Tage
+
+stop_loss: 0.08          # Notverkauf bei 8 % Verlust
+take_profit: 0.0         # 0 = aus
+
+maerkte:
+  - BTC/EUR
+  - ETH/EUR
+  - SOL/EUR
+  - XRP/EUR
+  - ADA/EUR
+  - DOT/EUR
+  - LINK/EUR
+  - LTC/EUR
+  - AVAX/EUR
+  - DOGE/EUR
+  - ATOM/EUR
+  - XLM/EUR
+  - UNI/EUR
+  - AAVE/EUR
+  - BCH/EUR
+  - FIL/EUR
