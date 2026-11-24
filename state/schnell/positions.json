@@ -1,0 +1,98 @@
+{
+  "AAVE/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "ADA/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "ATOM/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "AVAX/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "BCH/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "BTC/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "DOGE/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "DOT/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "ETH/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "FIL/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "LINK/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "LTC/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "SOL/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "UNI/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "XLM/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  },
+  "XRP/EUR": {
+    "bargeld": 100.0,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
+  }
+}
