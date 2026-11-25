@@ -1,9 +1,9 @@
 {
   "AAVE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 85.25,
-    "einstiegszeit": "2026-11-25T05:16:57+00:00",
-    "menge": 1.1627990478325083
+    "bargeld": 97.9662593179289,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ADA/EUR": {
     "bargeld": 0.0,
@@ -36,16 +36,16 @@
     "menge": 0.0
   },
   "ATOM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1.1368,
-    "einstiegszeit": "2026-11-25T04:04:35+00:00",
-    "menge": 87.7375087966221
+    "bargeld": 99.28815533919774,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AVAX/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 5.943,
-    "einstiegszeit": "2026-11-25T05:16:57+00:00",
-    "menge": 16.684403823772676
+    "bargeld": 98.26524892747128,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "BCH/EUR": {
     "bargeld": 0.0,
@@ -84,10 +84,10 @@
     "menge": 204.80492813141683
   },
   "LINK/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 8.00688,
-    "einstiegszeit": "2026-11-25T05:16:57+00:00",
-    "menge": 12.324233868219187
+    "bargeld": 97.93126997336618,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "LTC/EUR": {
     "bargeld": 99.58801959428108,
