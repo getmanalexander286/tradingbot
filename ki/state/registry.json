@@ -1,0 +1,458 @@
+{
+ "strategies": {
+  "S001": {
+   "name": "EMA Trend Following",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "fast": 20,
+      "slow": 100,
+      "stop": 3.0
+     },
+     "verdict": "UNCLEAR",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 227,
+      "start_equity": 2400.0,
+      "end_equity": 2404.6187518590427,
+      "total_return": 0.001924479941267876,
+      "cagr": 0.0007289884628729482,
+      "sharpe": 0.044858040670679986,
+      "sortino": 0.04791694073379865,
+      "max_drawdown": 0.03392619814698428,
+      "avg_drawdown": 0.014202341194820224,
+      "recovery_factor": 0.05672548196912964,
+      "win_rate": 0.19823788546255505,
+      "loss_rate": 0.801762114537445,
+      "avg_win": 3.9572295021066446,
+      "avg_loss": -0.9530581084382205,
+      "profit_factor": 1.0266277126678616,
+      "expectancy": 0.02034692448917572,
+      "expectancy_R": 0.012194273142174554,
+      "avg_bars_held": 24.537444933920703,
+      "fees_paid": 28.381529081615312
+     },
+     "R_mean": 0.012194273142174554,
+     "R_std": 1.729651226260055,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S002": {
+   "name": "RSI Mean Reversion",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "entry": 30,
+      "exit_": 50,
+      "stop": 2.0,
+      "hold": 20
+     },
+     "verdict": "INSUFFICIENT",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 22,
+      "start_equity": 2400.0,
+      "end_equity": 2399.952635009622,
+      "total_return": -1.9735412657428952e-05,
+      "cagr": -7.480238587986854e-06,
+      "sharpe": -0.0008385858102507775,
+      "sortino": -0.00039843858065957016,
+      "max_drawdown": 0.004582149115915035,
+      "avg_drawdown": 0.0017126898623226364,
+      "recovery_factor": -0.00430702104147649,
+      "win_rate": 0.5,
+      "loss_rate": 0.5,
+      "avg_win": 1.9997384007365369,
+      "avg_loss": -2.0040443089526963,
+      "profit_factor": 0.9978513907118103,
+      "expectancy": -0.002152954108079848,
+      "expectancy_R": -0.00373419813285867,
+      "avg_bars_held": 9.636363636363637,
+      "fees_paid": 4.1302485786556025
+     },
+     "R_mean": -0.00373419813285867,
+     "R_std": 1.1126112125577872,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S003": {
+   "name": "Donchian Volatility Breakout",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "n": 55,
+      "exit_n": 20,
+      "stop": 2.5
+     },
+     "verdict": "UNCLEAR",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 115,
+      "start_equity": 2400.0,
+      "end_equity": 2400.457051682685,
+      "total_return": 0.00019043820111863674,
+      "cagr": 7.2176359078302e-05,
+      "sharpe": 0.013346174076512769,
+      "sortino": 0.015503754963200589,
+      "max_drawdown": 0.027068709058847396,
+      "avg_drawdown": 0.011405889192884855,
+      "recovery_factor": 0.0070353632566896316,
+      "win_rate": 0.3217391304347826,
+      "loss_rate": 0.6782608695652174,
+      "avg_win": 4.219156940490105,
+      "avg_loss": -1.995535321992942,
+      "profit_factor": 1.0029363734597494,
+      "expectancy": 0.0039743624581251675,
+      "expectancy_R": 0.011038004899806653,
+      "avg_bars_held": 34.15652173913043,
+      "fees_paid": 19.446582988342733
+     },
+     "R_mean": 0.011038004899806653,
+     "R_std": 1.7817808880720702,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S004": {
+   "name": "Momentum + Volume Confirmation",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "lb": 60,
+      "vmult": 1.2,
+      "stop": 2.5
+     },
+     "verdict": "UNCLEAR",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 222,
+      "start_equity": 2400.0,
+      "end_equity": 2412.1052790055646,
+      "total_return": 0.005043866252318674,
+      "cagr": 0.001908759999274423,
+      "sharpe": 0.07738044940690023,
+      "sortino": 0.0880737760853015,
+      "max_drawdown": 0.048198200397224555,
+      "avg_drawdown": 0.02159957354301343,
+      "recovery_factor": 0.10464843522682893,
+      "win_rate": 0.3108108108108108,
+      "loss_rate": 0.6891891891891891,
+      "avg_win": 3.2786901095308503,
+      "avg_loss": -1.399505480732443,
+      "profit_factor": 1.0565338769400168,
+      "expectancy": 0.05452828380885078,
+      "expectancy_R": 0.0298950521057952,
+      "avg_bars_held": 25.184684684684683,
+      "fees_paid": 32.29749887818263
+     },
+     "R_mean": 0.0298950521057952,
+     "R_std": 1.6266082520697982,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S005": {
+   "name": "Liquidity Sweep / Stop Hunt Reversal (SMC)",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "n": 50,
+      "tp": 3.0,
+      "stop": 1.5,
+      "hold": 30
+     },
+     "verdict": "NO_EDGE",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 243,
+      "start_equity": 2400.0,
+      "end_equity": 2264.1157115614983,
+      "total_return": -0.05661845351604233,
+      "cagr": -0.021848982052630417,
+      "sharpe": -1.2806193532882315,
+      "sortino": -1.428665113757457,
+      "max_drawdown": 0.06340225988133552,
+      "avg_drawdown": 0.01767509836488373,
+      "recovery_factor": -0.893003713464002,
+      "win_rate": 0.29218106995884774,
+      "loss_rate": 0.7078189300411523,
+      "avg_win": 2.824454880082974,
+      "avg_loss": -1.9559336332813548,
+      "profit_factor": 0.5960880679491106,
+      "expectancy": -0.55919460262758,
+      "expectancy_R": -0.3015803976388484,
+      "avg_bars_held": 8.7119341563786,
+      "fees_paid": 46.625440568477
+     },
+     "R_mean": -0.3015803976388484,
+     "R_std": 1.1791290233927756,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S006": {
+   "name": "Bollinger Band Mean Reversion",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "n": 20,
+      "k": 2.5,
+      "stop": 3.0,
+      "hold": 20
+     },
+     "verdict": "NO_EDGE",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 155,
+      "start_equity": 2400.0,
+      "end_equity": 2368.408414793937,
+      "total_return": -0.013163160502526194,
+      "cagr": -0.0050096891905819785,
+      "sharpe": -0.6162883484133721,
+      "sortino": -0.6215345569588843,
+      "max_drawdown": 0.016908146627150344,
+      "avg_drawdown": 0.004845927698208279,
+      "recovery_factor": -0.7785099569333862,
+      "win_rate": 0.5096774193548387,
+      "loss_rate": 0.49032258064516127,
+      "avg_win": 0.9909751758213926,
+      "avg_loss": -1.4457713696835905,
+      "profit_factor": 0.7124865235072918,
+      "expectancy": -0.2038166787487927,
+      "expectancy_R": -0.10336414971723333,
+      "avg_bars_held": 10.709677419354838,
+      "fees_paid": 15.353160289626368
+     },
+     "R_mean": -0.10336414971723333,
+     "R_std": 0.7142080237990156,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S007": {
+   "name": "Time-Series Momentum (vol-gefiltert)",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "lb": 180,
+      "stop": 4.0
+     },
+     "verdict": "NO_EDGE",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 320,
+      "start_equity": 2400.0,
+      "end_equity": 2357.9162763789695,
+      "total_return": -0.017534884842095977,
+      "cagr": -0.006682671031793319,
+      "sharpe": -0.31179326109551525,
+      "sortino": -0.3341126955429296,
+      "max_drawdown": 0.04005071386236181,
+      "avg_drawdown": 0.01167692891182524,
+      "recovery_factor": -0.43781703622952445,
+      "win_rate": 0.2,
+      "loss_rate": 0.8,
+      "avg_win": 2.3482718907354974,
+      "avg_loss": -0.7514575180785241,
+      "profit_factor": 0.7812390701539674,
+      "expectancy": -0.1315116363157198,
+      "expectancy_R": -0.07047551223513085,
+      "avg_bars_held": 21.33125,
+      "fees_paid": 27.889814756677314
+     },
+     "R_mean": -0.07047551223513085,
+     "R_std": 1.098054729692481,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S008": {
+   "name": "ML Logistic Regression",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "thr": 0.6,
+      "stop": 2.5,
+      "hold": 10
+     },
+     "verdict": "NO_EDGE",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 140,
+      "start_equity": 2400.0,
+      "end_equity": 2387.4289784416915,
+      "total_return": -0.005237925649295261,
+      "cagr": -0.001988536809627184,
+      "sharpe": -0.2897998441126787,
+      "sortino": -0.1435951690836319,
+      "max_drawdown": 0.01358805255665807,
+      "avg_drawdown": 0.004533522492393404,
+      "recovery_factor": -0.38548023180324736,
+      "win_rate": 0.5071428571428571,
+      "loss_rate": 0.4928571428571429,
+      "avg_win": 0.7022548027639277,
+      "avg_loss": -0.9047987326746012,
+      "profit_factor": 0.7986417181445384,
+      "expectancy": -0.08979301113077583,
+      "expectancy_R": -0.04388632759840642,
+      "avg_bars_held": 3.642857142857143,
+      "fees_paid": 11.93191220665749
+     },
+     "R_mean": -0.04388632759840642,
+     "R_std": 0.5513099565933249,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  },
+  "S009": {
+   "name": "ML Gradient Boosting",
+   "active_version": 1,
+   "versions": [
+    {
+     "created": "2026-11-25T09:40:34+00:00",
+     "params": {
+      "thr": 0.6,
+      "stop": 2.5,
+      "hold": 10
+     },
+     "verdict": "NO_EDGE",
+     "data": "kraken+yahoo",
+     "data_range": [
+      "2021-11-25",
+      "2026-11-24"
+     ],
+     "code_hash": "f17bd959bb",
+     "oos": {
+      "n_trades": 360,
+      "start_equity": 2400.0,
+      "end_equity": 2355.16433206712,
+      "total_return": -0.018681528305366624,
+      "cagr": -0.007122236227176448,
+      "sharpe": -0.7463743649009277,
+      "sortino": -0.6305925060817075,
+      "max_drawdown": 0.021509066205651073,
+      "avg_drawdown": 0.009424184039765169,
+      "recovery_factor": -0.8685420430040998,
+      "win_rate": 0.5,
+      "loss_rate": 0.5,
+      "avg_win": 0.6182693975205781,
+      "avg_loss": -0.867356441592134,
+      "profit_factor": 0.7128204367580097,
+      "expectancy": -0.12454352203577801,
+      "expectancy_R": -0.06224157112429464,
+      "avg_bars_held": 3.1666666666666665,
+      "fees_paid": 39.854563383724205
+     },
+     "R_mean": -0.06224157112429464,
+     "R_std": 0.519776233252438,
+     "p_adj": 1.0,
+     "version": 1
+    }
+   ]
+  }
+ },
+ "hybrid": {
+  "version": 1,
+  "created": "2026-11-25T09:40:34+00:00",
+  "table": {
+   "krypto:SIDEWAYS": [
+    {
+     "sid": "S008",
+     "n": 29,
+     "mean": 0.0037130435166903802,
+     "t": 3.020332322918004
+    }
+   ]
+  },
+  "verdict": "INSUFFICIENT",
+  "oos": {
+   "n_trades": 0,
+   "start_equity": 2400.0,
+   "end_equity": 2400.0,
+   "total_return": 0.0,
+   "cagr": 0.0,
+   "sharpe": 0.0,
+   "sortino": 0.0,
+   "max_drawdown": 0.0,
+   "avg_drawdown": 0.0,
+   "recovery_factor": 0.0
+  },
+  "R_mean": 0.0,
+  "R_std": 1.0
+ },
+ "runs": [
+  {
+   "time": "2026-11-25T09:40:34+00:00",
+   "data": "kraken+yahoo",
+   "markets": 24,
+   "code_hash": "f17bd959bb",
+   "seconds": 17.6
+  }
+ ]
+}

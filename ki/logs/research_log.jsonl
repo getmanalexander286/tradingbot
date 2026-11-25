@@ -1,0 +1,42 @@
+{"time": "2026-11-25T09:40:17+00:00", "level": "WARN", "msg": "SIE.DE: kleine High/Low-Rundungsfehler repariert"}
+{"time": "2026-11-25T09:40:17+00:00", "level": "INFO", "msg": "Research gestartet: 24 Märkte (16 Krypto, 8 Aktien), Tageskerzen, Daten: kraken+yahoo"}
+{"time": "2026-11-25T09:40:22+00:00", "level": "INFO", "msg": "S001 EMA Trend Following: OOS 227 Trades über alle Märkte, Depot +0.2%, PF 1.03, MaxDD 3.4% -> UNCLEAR"}
+{"time": "2026-11-25T09:40:22+00:00", "level": "INFO", "msg": "S001: Krypto -0.84%/Trade (n=106), Aktien +0.78%/Trade (n=121)"}
+{"time": "2026-11-25T09:40:22+00:00", "level": "INFO", "msg": "S001: am besten in aktie:SIDEWAYS (+0.62%/Trade), am schlechtesten in krypto:WEAK_BULL (-1.31%/Trade)"}
+{"time": "2026-11-25T09:40:24+00:00", "level": "INFO", "msg": "S002 RSI Mean Reversion: OOS 22 Trades über alle Märkte, Depot -0.0%, PF 1.00, MaxDD 0.5% -> INSUFFICIENT"}
+{"time": "2026-11-25T09:40:24+00:00", "level": "INFO", "msg": "S002: Krypto -1.69%/Trade (n=4), Aktien +0.37%/Trade (n=18)"}
+{"time": "2026-11-25T09:40:25+00:00", "level": "INFO", "msg": "S003 Donchian Volatility Breakout: OOS 115 Trades über alle Märkte, Depot +0.0%, PF 1.00, MaxDD 2.7% -> UNCLEAR"}
+{"time": "2026-11-25T09:40:25+00:00", "level": "INFO", "msg": "S003: Krypto -1.05%/Trade (n=43), Aktien +0.66%/Trade (n=72)"}
+{"time": "2026-11-25T09:40:25+00:00", "level": "INFO", "msg": "S003: am besten in aktie:WEAK_BULL (+0.98%/Trade), am schlechtesten in krypto:SIDEWAYS (-0.87%/Trade)"}
+{"time": "2026-11-25T09:40:27+00:00", "level": "INFO", "msg": "S004 Momentum + Volume Confirmation: OOS 222 Trades über alle Märkte, Depot +0.5%, PF 1.06, MaxDD 4.8% -> UNCLEAR"}
+{"time": "2026-11-25T09:40:27+00:00", "level": "INFO", "msg": "S004: Krypto -0.39%/Trade (n=121), Aktien +0.60%/Trade (n=101)"}
+{"time": "2026-11-25T09:40:27+00:00", "level": "INFO", "msg": "S004: am besten in aktie:WEAK_BULL (+1.91%/Trade), am schlechtesten in krypto:SIDEWAYS (-0.25%/Trade)"}
+{"time": "2026-11-25T09:40:29+00:00", "level": "INFO", "msg": "S005 Liquidity Sweep / Stop Hunt Reversal (SMC): OOS 243 Trades über alle Märkte, Depot -5.7%, PF 0.60, MaxDD 6.3% -> NO_EDGE"}
+{"time": "2026-11-25T09:40:29+00:00", "level": "INFO", "msg": "S005: Krypto -0.85%/Trade (n=144), Aktien -0.25%/Trade (n=99)"}
+{"time": "2026-11-25T09:40:29+00:00", "level": "INFO", "msg": "S005: am besten in aktie:WEAK_BEAR (-0.14%/Trade), am schlechtesten in krypto:SIDEWAYS (-1.13%/Trade)"}
+{"time": "2026-11-25T09:40:30+00:00", "level": "INFO", "msg": "S006 Bollinger Band Mean Reversion: OOS 155 Trades über alle Märkte, Depot -1.3%, PF 0.71, MaxDD 1.7% -> NO_EDGE"}
+{"time": "2026-11-25T09:40:30+00:00", "level": "INFO", "msg": "S006: Krypto -0.36%/Trade (n=76), Aktien -0.06%/Trade (n=79)"}
+{"time": "2026-11-25T09:40:30+00:00", "level": "INFO", "msg": "S006: am besten in aktie:SIDEWAYS (-0.09%/Trade), am schlechtesten in krypto:SIDEWAYS (-0.63%/Trade)"}
+{"time": "2026-11-25T09:40:31+00:00", "level": "INFO", "msg": "S007 Time-Series Momentum (vol-gefiltert): OOS 320 Trades über alle Märkte, Depot -1.8%, PF 0.78, MaxDD 4.0% -> NO_EDGE"}
+{"time": "2026-11-25T09:40:31+00:00", "level": "INFO", "msg": "S007: Krypto -0.66%/Trade (n=164), Aktien +0.40%/Trade (n=156)"}
+{"time": "2026-11-25T09:40:31+00:00", "level": "INFO", "msg": "S007: am besten in aktie:WEAK_BEAR (+0.97%/Trade), am schlechtesten in krypto:WEAK_BULL (-1.29%/Trade)"}
+{"time": "2026-11-25T09:40:32+00:00", "level": "INFO", "msg": "S008 ML Logistic Regression: OOS 140 Trades über alle Märkte, Depot -0.5%, PF 0.80, MaxDD 1.4% -> NO_EDGE"}
+{"time": "2026-11-25T09:40:32+00:00", "level": "INFO", "msg": "S008: Krypto -0.12%/Trade (n=91), Aktien -0.02%/Trade (n=49)"}
+{"time": "2026-11-25T09:40:32+00:00", "level": "INFO", "msg": "S008: am besten in krypto:SIDEWAYS (+0.37%/Trade), am schlechtesten in krypto:WEAK_BEAR (-0.46%/Trade)"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "S009 ML Gradient Boosting: OOS 360 Trades über alle Märkte, Depot -1.9%, PF 0.71, MaxDD 2.2% -> NO_EDGE"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "S009: Krypto -0.15%/Trade (n=226), Aktien -0.08%/Trade (n=134)"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "S009: am besten in aktie:WEAK_BULL (+0.26%/Trade), am schlechtesten in krypto:WEAK_BEAR (-0.24%/Trade)"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "HYBRID: OOS 0 Trades, Depot +0.0%, MaxDD 0.0% -> INSUFFICIENT"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Regime krypto:SIDEWAYS: bevorzugt S008 (n=29, t=3.02)"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Benchmark Buy & Hold (alle Märkte, gleicher Zeitraum): -23.3%, MaxDD 39.4%"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S001: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S002: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S003: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S004: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S005: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S006: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S007: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S008: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S009: erste Version aktiviert"}
+{"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Research fertig in 18s"}
+{"time": "2026-11-25T09:41:01+00:00", "level": "INFO", "msg": "Neue Tageskerzen verarbeitet. Regime-Verteilung: WEAK_BEAR 10, SIDEWAYS 7, STRONG_BEAR 5, STRESS 2. Hybrid hält 0 von 24 Positionen."}
