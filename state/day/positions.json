@@ -12,10 +12,10 @@
     "menge": 0.0
   },
   "AIR.PA": {
-    "bargeld": 100.0,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 194.47999572753906,
+    "einstiegszeit": "2026-11-25T10:15:32+00:00",
+    "menge": 0.5128548035332791
   },
   "ALV.DE": {
     "bargeld": 0.0,
@@ -54,10 +54,10 @@
     "menge": 0.0
   },
   "BTC/EUR": {
-    "bargeld": 100.0,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 53850.0,
+    "einstiegszeit": "2026-11-25T10:15:32+00:00",
+    "menge": 0.0018521819870009283
   },
   "DOGE/EUR": {
     "bargeld": 98.68689656067566,
@@ -66,10 +66,10 @@
     "menge": 0.0
   },
   "DOT/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.5971,
-    "einstiegszeit": "2026-11-25T09:00:21+00:00",
-    "menge": 165.80910643790284
+    "bargeld": 97.35803022549742,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ETH/EUR": {
     "bargeld": 98.69517004251021,
@@ -102,10 +102,10 @@
     "menge": 0.24494105356089613
   },
   "MSF.DE": {
-    "bargeld": 0.0,
-    "einstieg": 448.79998779296875,
-    "einstiegszeit": "2026-11-25T09:00:21+00:00",
-    "menge": 0.2222370826935272
+    "bargeld": 98.63837349394319,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SAP.DE": {
     "bargeld": 0.0,
@@ -132,15 +132,15 @@
     "menge": 0.0
   },
   "XLM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.112882,
-    "einstiegszeit": "2026-11-25T05:16:57+00:00",
-    "menge": 883.5775411491646
+    "bargeld": 98.77124540716854,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XRP/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.83961,
-    "einstiegszeit": "2026-11-25T05:16:57+00:00",
-    "menge": 117.17004512940038
+    "bargeld": 97.6118278658264,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   }
 }
