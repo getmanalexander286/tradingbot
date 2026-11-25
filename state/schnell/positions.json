@@ -18,10 +18,10 @@
     "menge": 0.0
   },
   "ALV.DE": {
-    "bargeld": 0.0,
-    "einstieg": 455.70001220703125,
-    "einstiegszeit": "2026-11-24T23:07:41+00:00",
-    "menge": 0.2188720590919946
+    "bargeld": 100.35388796695342,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "APC.DE": {
     "bargeld": 0.0,

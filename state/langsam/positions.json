@@ -114,10 +114,10 @@
     "menge": 0.5268328551730452
   },
   "SIE.DE": {
-    "bargeld": 0.0,
-    "einstieg": 255.0500030517578,
-    "einstiegszeit": "2026-11-24T23:07:41+00:00",
-    "menge": 0.3910605716784075
+    "bargeld": 99.81220967110545,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SOL/EUR": {
     "bargeld": 100.0,
