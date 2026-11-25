@@ -48,10 +48,10 @@
     "menge": 0.0
   },
   "BCH/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 179.47,
-    "einstiegszeit": "2026-11-25T00:32:30+00:00",
-    "menge": 0.5557474786872457
+    "bargeld": 98.90420136334762,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "BTC/EUR": {
     "bargeld": 100.0,
