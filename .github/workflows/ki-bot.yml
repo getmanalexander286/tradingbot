@@ -1,0 +1,77 @@
+# KI Quant Research Bot – läuft unabhängig neben dem "Trading Bot" (MA-Bots).
+# Eigene Concurrency-Gruppe, eigener Ordner ki/, eigene Dashboard-Seite docs/ki/.
+# Committet ausschließlich ki/ und docs/ki/ – die Dateien der MA-Bots werden nie verändert.
+name: KI Bot
+
+on:
+  schedule:
+    - cron: "41 * * * *"     # stündlich: Paper-Trading-Schritt
+    - cron: "17 3 * * 0"     # sonntags: Research-Zyklus
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "step | research | kill | unkill | reset"
+        default: "step"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ki-bot
+  cancel-in-progress: false
+
+jobs:
+  ki:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: ki
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: ki/requirements.txt
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: ki/data
+          key: ki-market-data-${{ github.run_id }}
+          restore-keys: ki-market-data-
+      - name: Aufgabe bestimmen
+        id: t
+        run: |
+          T="${{ github.event.inputs.task }}"
+          if [ -z "$T" ]; then
+            if [ "${{ github.event.schedule }}" = "17 3 * * 0" ]; then T=research; else T=step; fi
+          fi
+          if [ "$T" = "step" ] && [ ! -f state/registry.json ]; then T=research; fi
+          echo "task=$T" >> "$GITHUB_OUTPUT"
+      - name: Tests (Sicherheitsnetz)
+        if: steps.t.outputs.task == 'research'
+        run: python -m pytest -q
+      - name: KI-Bot ausführen (nur Paper)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python run.py ${{ steps.t.outputs.task }}
+          if [ "${{ steps.t.outputs.task }}" = "research" ]; then python run.py step; fi
+          python run.py dashboard
+      - name: Ergebnisse speichern (nur ki/ und docs/ki/)
+        working-directory: .
+        run: |
+          git config user.name "ki-bot"
+          git config user.email "ki-bot@users.noreply.github.com"
+          git add -A ki/state ki/reports ki/logs/research_log.jsonl docs/ki
+          git add -A ki/KILL_SWITCH 2>/dev/null || true
+          if git diff --staged --quiet; then echo "Keine Änderung."; exit 0; fi
+          git commit -m "KI-Bot: ${{ steps.t.outputs.task }} $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for versuch in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            git pull --rebase --autostash || true
+            sleep $((versuch * 7))
+          done
+          echo "Push fehlgeschlagen." && exit 1
