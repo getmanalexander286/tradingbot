@@ -24,8 +24,9 @@ T = {
     'serie1': ('#2a78d6', '#3987e5'),
     'serie2': ('#eb6834', '#d95926'),
     'serie3': ('#1baf7a', '#199e70'),
+    'serie4': ('#8a5cd6', '#9b6fe8'),
 }
-SERIEN = ['serie1', 'serie2', 'serie3']
+SERIEN = ['serie1', 'serie2', 'serie3', 'serie4']
 
 
 def lade_json(name, standard):
@@ -396,7 +397,7 @@ footer {{ margin-top:36px; color:var(--muted); font-size:12px; }}
   {stand}
   {'<span class="marke">pausiert</span>' if not aktiv else ''}
 </div>
-<p class="unter">Papier-Depot, kein echtes Geld &middot; drei Strategien im Vergleich
+<p class="unter">Papier-Depot, kein echtes Geld &middot; {len(cfg['strategien'])} Strategien im Vergleich
   &middot; {anz_krypto} Kryptowaehrungen und {anz_aktien} Aktien
   &middot; Stand {kurz(letzter.get('zeit',''))} UTC</p>
 
