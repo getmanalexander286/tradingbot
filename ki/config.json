@@ -1,0 +1,9 @@
+{
+  "mode": "PAPER",
+  "markets_config": "../config.yaml",
+  "costs": {"fee_rate": 0.0026, "spread_bps": 5, "slippage_bps": 5, "slippage_atr_frac": 0.03, "max_participation": 0.01},
+  "risk_sleeve": {"risk_per_trade": 0.02, "max_position_frac": 1.0},
+  "risk_portfolio": {"max_daily_loss": 0.03, "max_weekly_loss": 0.06, "max_drawdown": 0.20, "kill_switch_file": "KILL_SWITCH"},
+  "research": {"folds": 4, "warmup": 250, "min_trades": 50, "min_regime_trades": 15, "min_regime_t": 2.0, "mc_runs": 2000, "ml_horizon": 5},
+  "paper": {"history_bars": 800}
+}
