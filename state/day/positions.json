@@ -18,10 +18,10 @@
     "menge": 0.0
   },
   "ALV.DE": {
-    "bargeld": 0.0,
-    "einstieg": 459.70001220703125,
-    "einstiegszeit": "2026-11-25T09:00:21+00:00",
-    "menge": 0.21696758179567097
+    "bargeld": 98.83146560175098,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "APC.DE": {
     "bargeld": 98.83259154885599,
@@ -96,10 +96,10 @@
     "menge": 0.0
   },
   "MC.PA": {
-    "bargeld": 0.0,
-    "einstieg": 407.20001220703125,
-    "einstiegszeit": "2026-11-25T09:00:21+00:00",
-    "menge": 0.24494105356089613
+    "bargeld": 97.70947050054312,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MSF.DE": {
     "bargeld": 98.63837349394319,
@@ -108,10 +108,10 @@
     "menge": 0.0
   },
   "SAP.DE": {
-    "bargeld": 0.0,
-    "einstieg": 188.63999938964844,
-    "einstiegszeit": "2026-11-25T12:31:03+00:00",
-    "menge": 0.5275418180459881
+    "bargeld": 99.17255880441635,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SIE.DE": {
     "bargeld": 100.0,
