@@ -10,10 +10,10 @@ import time
 from datetime import datetime, timezone
 
 # Wie viele Kerzen je Zeitfenster geholt werden
-TIEFE = {'1d': 250, '1h': 500, '15m': 500, '5m': 500}
+TIEFE = {'1d': 400, '1h': 500, '15m': 500, '5m': 500}
 
 # Umrechnung der Zeitfenster fuer Yahoo Finance
-YAHOO = {'1d': ('1y', '1d'), '1h': ('1mo', '1h'),
+YAHOO = {'1d': ('2y', '1d'), '1h': ('1mo', '1h'),
          '15m': ('5d', '15m'), '5m': ('5d', '5m')}
 
 # Ab wann ein Kurs als veraltet gilt (Minuten)
