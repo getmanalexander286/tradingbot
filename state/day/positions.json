@@ -36,10 +36,10 @@
     "menge": 0.0
   },
   "ATOM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1.1553,
-    "einstiegszeit": "2026-11-25T09:00:21+00:00",
-    "menge": 85.71800063647177
+    "bargeld": 96.48125853259091,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AVAX/EUR": {
     "bargeld": 98.26524892747128,
@@ -54,10 +54,10 @@
     "menge": 0.0
   },
   "BTC/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 53850.0,
-    "einstiegszeit": "2026-11-25T10:15:32+00:00",
-    "menge": 0.0018521819870009283
+    "bargeld": 99.18306528684121,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "DOGE/EUR": {
     "bargeld": 98.68689656067566,
@@ -90,10 +90,10 @@
     "menge": 0.0
   },
   "LTC/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 37.18,
-    "einstiegszeit": "2026-11-25T09:00:21+00:00",
-    "menge": 2.671573177604517
+    "bargeld": 98.00498427246617,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MC.PA": {
     "bargeld": 0.0,
@@ -108,10 +108,10 @@
     "menge": 0.0
   },
   "SAP.DE": {
-    "bargeld": 0.0,
-    "einstieg": 189.33999633789062,
-    "einstiegszeit": "2026-11-25T09:00:21+00:00",
-    "menge": 0.5267772363426421
+    "bargeld": 99.77490298196233,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SIE.DE": {
     "bargeld": 100.0,
