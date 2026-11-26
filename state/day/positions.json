@@ -1,9 +1,9 @@
 {
   "AAVE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 87.33,
-    "einstiegszeit": "2026-11-26T01:34:30+00:00",
-    "menge": 1.139267260903191
+    "bargeld": 98.9494538574433,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ADA/EUR": {
     "bargeld": 0.0,
@@ -78,10 +78,10 @@
     "menge": 0.06425819787057968
   },
   "FIL/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.501,
-    "einstiegszeit": "2026-11-26T02:41:26+00:00",
-    "menge": 204.37701867393199
+    "bargeld": 101.31128229741374,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "LINK/EUR": {
     "bargeld": 0.0,
