@@ -126,16 +126,16 @@
     "menge": 1.5598378866704687
   },
   "UNI/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 4.3403,
-    "einstiegszeit": "2026-11-26T01:34:30+00:00",
-    "menge": 22.869013171566415
+    "bargeld": 98.19740979453782,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XLM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.117031,
-    "einstiegszeit": "2026-11-26T01:34:30+00:00",
-    "menge": 856.5442978577228
+    "bargeld": 100.57535642117331,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XRP/EUR": {
     "bargeld": 0.0,
