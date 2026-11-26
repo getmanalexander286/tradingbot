@@ -12,16 +12,16 @@
     "menge": 739.741058048663
   },
   "AIR.PA": {
-    "bargeld": 0.0,
-    "einstieg": 195.74000549316406,
-    "einstiegszeit": "2026-11-26T09:50:42+00:00",
-    "menge": 0.5060210495885664
+    "bargeld": 98.15510303596795,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ALV.DE": {
-    "bargeld": 0.0,
-    "einstieg": 458.3999938964844,
-    "einstiegszeit": "2026-11-26T09:50:42+00:00",
-    "menge": 0.21504036889984438
+    "bargeld": 98.31821008132933,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "APC.DE": {
     "bargeld": 0.0,
@@ -96,10 +96,10 @@
     "menge": 0.0
   },
   "MC.PA": {
-    "bargeld": 0.0,
-    "einstieg": 403.1499938964844,
-    "einstiegszeit": "2026-11-26T09:50:42+00:00",
-    "menge": 0.24173490599696015
+    "bargeld": 96.59927578185746,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MSF.DE": {
     "bargeld": 0.0,
@@ -108,16 +108,16 @@
     "menge": 0.2196760352396178
   },
   "SAP.DE": {
-    "bargeld": 0.0,
-    "einstieg": 191.9199981689453,
-    "einstiegszeit": "2026-11-26T08:41:24+00:00",
-    "menge": 0.5134222327955417
+    "bargeld": 98.45390821225018,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SIE.DE": {
-    "bargeld": 0.0,
-    "einstieg": 251.35000610351562,
-    "einstiegszeit": "2026-11-26T09:50:42+00:00",
-    "menge": 0.3968171775532928
+    "bargeld": 99.16404642984533,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SOL/EUR": {
     "bargeld": 99.54961469374283,
@@ -126,10 +126,10 @@
     "menge": 0.0
   },
   "UNI/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 4.3209,
-    "einstiegszeit": "2026-11-26T09:50:42+00:00",
-    "menge": 22.667059299931037
+    "bargeld": 97.43875770369316,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XLM/EUR": {
     "bargeld": 100.57535642117331,
