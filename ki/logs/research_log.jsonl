@@ -40,3 +40,4 @@
 {"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Registry S009: erste Version aktiviert"}
 {"time": "2026-11-25T09:40:34+00:00", "level": "INFO", "msg": "Research fertig in 18s"}
 {"time": "2026-11-25T09:41:01+00:00", "level": "INFO", "msg": "Neue Tageskerzen verarbeitet. Regime-Verteilung: WEAK_BEAR 10, SIDEWAYS 7, STRONG_BEAR 5, STRESS 2. Hybrid hält 0 von 24 Positionen."}
+{"time": "2026-11-26T00:28:14+00:00", "level": "INFO", "msg": "Neue Tageskerzen verarbeitet. Regime-Verteilung: WEAK_BEAR 11, SIDEWAYS 7, STRONG_BEAR 4, STRESS 2. Hybrid hält 0 von 24 Positionen."}
