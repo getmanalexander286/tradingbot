@@ -1,9 +1,9 @@
 {
   "AAVE/EUR": {
-    "bargeld": 98.9494538574433,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 87.81,
+    "einstiegszeit": "2026-11-26T08:41:24+00:00",
+    "menge": 1.1239287698145306
   },
   "ADA/EUR": {
     "bargeld": 99.78123419454073,
@@ -102,16 +102,16 @@
     "menge": 0.0
   },
   "MSF.DE": {
-    "bargeld": 98.63837349394319,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 447.8500061035156,
+    "einstiegszeit": "2026-11-26T08:41:24+00:00",
+    "menge": 0.2196760352396178
   },
   "SAP.DE": {
-    "bargeld": 98.79285540206155,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 191.9199981689453,
+    "einstiegszeit": "2026-11-26T08:41:24+00:00",
+    "menge": 0.5134222327955417
   },
   "SIE.DE": {
     "bargeld": 100.0,
