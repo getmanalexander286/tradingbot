@@ -36,10 +36,10 @@
     "menge": 0.0
   },
   "ATOM/EUR": {
-    "bargeld": 95.33650048679947,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 1.1291,
+    "einstiegszeit": "2026-11-26T03:42:51+00:00",
+    "menge": 84.21630111197749
   },
   "AVAX/EUR": {
     "bargeld": 0.0,
