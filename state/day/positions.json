@@ -1,15 +1,15 @@
 {
   "AAVE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 86.19,
-    "einstiegszeit": "2026-11-26T19:49:07+00:00",
-    "menge": 1.1353452420365766
+    "bargeld": 97.85010889023319,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ADA/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.135902,
-    "einstiegszeit": "2026-11-26T17:41:07+00:00",
-    "menge": 727.706620689423
+    "bargeld": 98.69554124643274,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AIR.PA": {
     "bargeld": 98.15510303596795,
@@ -36,64 +36,64 @@
     "menge": 0.0
   },
   "ATOM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1.1,
-    "einstiegszeit": "2026-11-26T18:37:53+00:00",
-    "menge": 83.90080593297016
+    "bargeld": 92.82917899498803,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AVAX/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 6.063,
-    "einstiegszeit": "2026-11-26T18:37:53+00:00",
-    "menge": 16.33685484952935
+    "bargeld": 98.36916618551949,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "BCH/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 189.35,
-    "einstiegszeit": "2026-11-26T17:41:07+00:00",
-    "menge": 0.5149336231089634
+    "bargeld": 98.26609225915344,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "BTC/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 55313.3,
-    "einstiegszeit": "2026-11-26T19:49:07+00:00",
-    "menge": 0.0017597804320404534
+    "bargeld": 96.73601748977512,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "DOGE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.0519496,
-    "einstiegszeit": "2026-11-26T18:37:53+00:00",
-    "menge": 1910.485241351104
+    "bargeld": 98.07624820918133,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "DOT/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.6156,
-    "einstiegszeit": "2026-11-26T18:37:53+00:00",
-    "menge": 154.59081001916527
+    "bargeld": 94.61029303308764,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ETH/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1548.0,
-    "einstiegszeit": "2026-11-26T18:37:53+00:00",
-    "menge": 0.06244832100317053
+    "bargeld": 96.14460070691274,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "FIL/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.498,
-    "einstiegszeit": "2026-11-26T17:41:07+00:00",
-    "menge": 202.66266131030554
+    "bargeld": 99.45078328832217,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "LINK/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 8.43121,
-    "einstiegszeit": "2026-11-26T18:37:53+00:00",
-    "menge": 11.56841261691324
+    "bargeld": 97.98076944663728,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "LTC/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 39.72,
-    "einstiegszeit": "2026-11-26T19:49:07+00:00",
-    "menge": 2.4548474738095223
+    "bargeld": 98.23241059955001,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MC.PA": {
     "bargeld": 96.13349356550373,
@@ -120,27 +120,27 @@
     "menge": 0.0
   },
   "SOL/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 64.58,
-    "einstiegszeit": "2026-11-26T17:41:07+00:00",
-    "menge": 1.523366494065132
+    "bargeld": 98.42710391367685,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "UNI/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 4.2715,
-    "einstiegszeit": "2026-11-26T19:49:07+00:00",
-    "menge": 22.752058277809564
+    "bargeld": 96.34952724443045,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XLM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.1163,
-    "einstiegszeit": "2026-11-26T19:49:07+00:00",
-    "menge": 862.5439423428912
+    "bargeld": 100.02465451336553,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XRP/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.86472,
-    "einstiegszeit": "2026-11-26T17:41:07+00:00",
-    "menge": 114.68537758670685
+    "bargeld": 98.74817822186836,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   }
 }
