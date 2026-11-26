@@ -18,10 +18,10 @@
     "menge": 0.0
   },
   "ALV.DE": {
-    "bargeld": 0.0,
-    "einstieg": 459.1000061035156,
-    "einstiegszeit": "2026-11-26T14:26:53+00:00",
-    "menge": 0.21359743287175476
+    "bargeld": 98.04196760781313,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "APC.DE": {
     "bargeld": 98.31933018112079,
@@ -30,10 +30,10 @@
     "menge": 0.0
   },
   "ASML.AS": {
-    "bargeld": 0.0,
-    "einstieg": 1162.800048828125,
-    "einstiegszeit": "2026-11-26T09:50:42+00:00",
-    "menge": 0.08577571019240875
+    "bargeld": 100.18220390805882,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ATOM/EUR": {
     "bargeld": 92.53146834396149,
@@ -90,16 +90,16 @@
     "menge": 0.0
   },
   "LTC/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 39.91,
-    "einstiegszeit": "2026-11-26T14:26:53+00:00",
-    "menge": 2.4732667167917817
+    "bargeld": 97.76071953049352,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MC.PA": {
-    "bargeld": 0.0,
-    "einstieg": 401.79998779296875,
-    "einstiegszeit": "2026-11-26T15:34:33+00:00",
-    "menge": 0.23979124089587806
+    "bargeld": 96.13349356550373,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MSF.DE": {
     "bargeld": 98.33426636891997,
@@ -108,22 +108,22 @@
     "menge": 0.0
   },
   "SAP.DE": {
-    "bargeld": 0.0,
-    "einstieg": 193.33999633789062,
-    "einstiegszeit": "2026-11-26T15:34:33+00:00",
-    "menge": 0.5079028132352021
+    "bargeld": 98.02366845567299,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SIE.DE": {
-    "bargeld": 0.0,
-    "einstieg": 251.64999389648438,
-    "einstiegszeit": "2026-11-26T15:34:33+00:00",
-    "menge": 0.3930308853884279
+    "bargeld": 98.21785742071856,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SOL/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 64.83,
-    "einstiegszeit": "2026-11-26T14:26:53+00:00",
-    "menge": 1.5315561575742571
+    "bargeld": 98.6354603837239,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "UNI/EUR": {
     "bargeld": 97.43875770369316,
