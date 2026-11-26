@@ -6,10 +6,10 @@
     "menge": 1.1239287698145306
   },
   "ADA/EUR": {
-    "bargeld": 99.78123419454073,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 0.134536,
+    "einstiegszeit": "2026-11-26T10:51:46+00:00",
+    "menge": 739.741058048663
   },
   "AIR.PA": {
     "bargeld": 0.0,
@@ -36,10 +36,10 @@
     "menge": 0.08577571019240875
   },
   "ATOM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1.1291,
-    "einstiegszeit": "2026-11-26T03:42:51+00:00",
-    "menge": 84.21630111197749
+    "bargeld": 92.53146834396149,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AVAX/EUR": {
     "bargeld": 99.30855319099302,
@@ -60,10 +60,10 @@
     "menge": 0.0017885525949868425
   },
   "DOGE/EUR": {
-    "bargeld": 100.549990183587,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 0.0515191,
+    "einstiegszeit": "2026-11-26T10:51:46+00:00",
+    "menge": 1946.6287301041684
   },
   "DOT/EUR": {
     "bargeld": 0.0,
