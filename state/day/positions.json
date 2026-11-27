@@ -1,9 +1,9 @@
 {
   "AAVE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 86.94,
-    "einstiegszeit": "2026-11-27T02:07:43+00:00",
-    "menge": 1.1225638211078741
+    "bargeld": 98.30484462418883,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ADA/EUR": {
     "bargeld": 0.0,
@@ -66,16 +66,16 @@
     "menge": 1876.5406632425152
   },
   "DOT/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.6227,
-    "einstiegszeit": "2026-11-27T02:07:43+00:00",
-    "menge": 151.54055929211756
+    "bargeld": 94.45148149333998,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ETH/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1563.44,
-    "einstiegszeit": "2026-11-27T02:07:43+00:00",
-    "menge": 0.061335660303609194
+    "bargeld": 96.71282319412757,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "FIL/EUR": {
     "bargeld": 0.0,
@@ -90,10 +90,10 @@
     "menge": 11.407675478635976
   },
   "LTC/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 40.46,
-    "einstiegszeit": "2026-11-27T02:07:43+00:00",
-    "menge": 2.421577022540563
+    "bargeld": 97.84303016164209,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MC.PA": {
     "bargeld": 96.13349356550373,
