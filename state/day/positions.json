@@ -18,10 +18,10 @@
     "menge": 0.0
   },
   "ALV.DE": {
-    "bargeld": 97.61727312735003,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 462.6000061035156,
+    "einstiegszeit": "2026-11-27T15:00:35+00:00",
+    "menge": 0.210470097130591
   },
   "APC.DE": {
     "bargeld": 0.0,
@@ -36,10 +36,10 @@
     "menge": 0.0
   },
   "ATOM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1.1297,
-    "einstiegszeit": "2026-11-27T14:02:15+00:00",
-    "menge": 81.36021693914068
+    "bargeld": 88.5169805531579,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AVAX/EUR": {
     "bargeld": 99.46359875900674,
@@ -60,16 +60,16 @@
     "menge": 0.0
   },
   "DOGE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.0521285,
-    "einstiegszeit": "2026-11-27T02:07:43+00:00",
-    "menge": 1876.5406632425152
+    "bargeld": 96.66832995215704,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "DOT/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.6232,
-    "einstiegszeit": "2026-11-27T14:02:15+00:00",
-    "menge": 151.16480687011762
+    "bargeld": 90.20675500012035,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ETH/EUR": {
     "bargeld": 96.71282319412757,
@@ -78,10 +78,10 @@
     "menge": 0.0
   },
   "FIL/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.5,
-    "einstiegszeit": "2026-11-27T14:02:15+00:00",
-    "menge": 196.95945625605228
+    "bargeld": 92.72315470813923,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "LINK/EUR": {
     "bargeld": 99.45079625517057,
@@ -96,16 +96,16 @@
     "menge": 0.0
   },
   "MC.PA": {
-    "bargeld": 0.0,
-    "einstieg": 399.0,
-    "einstiegszeit": "2026-11-27T12:40:25+00:00",
-    "menge": 0.2403096403063494
+    "bargeld": 95.73012173255609,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MSF.DE": {
-    "bargeld": 0.0,
-    "einstieg": 457.54998779296875,
-    "einstiegszeit": "2026-11-27T09:32:08+00:00",
-    "menge": 0.21435602642992346
+    "bargeld": 96.46597639330341,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "SAP.DE": {
     "bargeld": 0.0,
