@@ -24,10 +24,10 @@
     "menge": 0.210470097130591
   },
   "APC.DE": {
-    "bargeld": 0.0,
-    "einstieg": 327.75,
-    "einstiegszeit": "2026-11-27T10:34:27+00:00",
-    "menge": 0.2992027457594199
+    "bargeld": 97.9579467121612,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ASML.AS": {
     "bargeld": 98.09613851416252,
@@ -96,10 +96,10 @@
     "menge": 0.0
   },
   "MC.PA": {
-    "bargeld": 95.73012173255609,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 403.6000061035156,
+    "einstiegszeit": "2026-11-27T16:06:15+00:00",
+    "menge": 0.23657388992100842
   },
   "MSF.DE": {
     "bargeld": 96.46597639330341,
