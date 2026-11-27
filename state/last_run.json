@@ -4,522 +4,528 @@
   "signale": {
     "day": {
       "AAVE/EUR": {
-        "ma_langsam": 87.90190476190476,
-        "ma_schnell": 87.73125,
-        "signal": 0
+        "ma_langsam": 88.10761904761905,
+        "ma_schnell": 88.35375,
+        "signal": 1
       },
       "ADA/EUR": {
-        "ma_langsam": 0.1386919523809524,
-        "ma_schnell": 0.139358375,
+        "ma_langsam": 0.13912719047619046,
+        "ma_schnell": 0.139377,
         "signal": 1
       },
       "AIR.PA": {
-        "ma_langsam": 194.75714183989027,
-        "ma_schnell": 194.9375,
+        "ma_langsam": 195.13714308965774,
+        "ma_schnell": 195.82750129699707,
         "signal": 1
       },
       "ALV.DE": {
-        "ma_langsam": 459.2238086518787,
-        "ma_schnell": 460.39999771118164,
+        "ma_langsam": 460.0952380952381,
+        "ma_schnell": 460.875,
         "signal": 1
       },
       "APC.DE": {
-        "ma_langsam": 324.7642851329985,
-        "ma_schnell": 324.50000381469727,
-        "signal": 0
+        "ma_langsam": 0.0,
+        "ma_schnell": 0.0,
+        "signal": null
       },
       "ASML.AS": {
-        "ma_langsam": 1170.2095307849702,
-        "ma_schnell": 1174.5750122070312,
+        "ma_langsam": 1187.8095296223958,
+        "ma_schnell": 1214.9250030517578,
         "signal": 1
       },
       "ATOM/EUR": {
-        "ma_langsam": 1.1296190476190477,
-        "ma_schnell": 1.130025,
-        "signal": 1
+        "ma_langsam": 1.1315333333333333,
+        "ma_schnell": 1.1310875,
+        "signal": 0
       },
       "AVAX/EUR": {
-        "ma_langsam": 6.148428571428571,
-        "ma_schnell": 6.154249999999999,
+        "ma_langsam": 6.163142857142857,
+        "ma_schnell": 6.17275,
         "signal": 1
       },
       "BCH/EUR": {
-        "ma_langsam": 195.74761904761903,
-        "ma_schnell": 194.34249999999997,
+        "ma_langsam": 194.67809523809524,
+        "ma_schnell": 193.82625,
         "signal": 0
       },
       "BTC/EUR": {
-        "ma_langsam": 56090.990476190476,
-        "ma_schnell": 56167.5875,
+        "ma_langsam": 56183.48095238096,
+        "ma_schnell": 56262.2125,
         "signal": 1
       },
       "DOGE/EUR": {
-        "ma_langsam": 0.05276341428571428,
-        "ma_schnell": 0.0529192625,
+        "ma_langsam": 0.052899723809523805,
+        "ma_schnell": 0.0530759375,
         "signal": 1
       },
       "DOT/EUR": {
-        "ma_langsam": 0.6271142857142857,
-        "ma_schnell": 0.626625,
+        "ma_langsam": 0.6267238095238095,
+        "ma_schnell": 0.624675,
         "signal": 0
       },
       "ETH/EUR": {
-        "ma_langsam": 1578.7038095238095,
-        "ma_schnell": 1577.88625,
+        "ma_langsam": 1580.1328571428571,
+        "ma_schnell": 1579.015,
         "signal": 0
       },
       "FIL/EUR": {
-        "ma_langsam": 0.4998095238095238,
-        "ma_schnell": 0.499875,
-        "signal": 1
+        "ma_langsam": 0.499952380952381,
+        "ma_schnell": 0.49974999999999997,
+        "signal": 0
       },
       "LINK/EUR": {
-        "ma_langsam": 8.731164761904763,
-        "ma_schnell": 8.73895375,
-        "signal": 1
+        "ma_langsam": 8.756249047619047,
+        "ma_schnell": 8.74900625,
+        "signal": 0
       },
       "LTC/EUR": {
-        "ma_langsam": 40.54714285714286,
-        "ma_schnell": 40.425,
+        "ma_langsam": 40.55238095238095,
+        "ma_schnell": 40.542500000000004,
         "signal": 0
       },
       "MC.PA": {
-        "ma_langsam": 401.46904936290923,
-        "ma_schnell": 402.09374618530273,
-        "signal": 1
-      },
-      "MSF.DE": {
-        "ma_langsam": 448.7857157389323,
-        "ma_schnell": 448.75000381469727,
+        "ma_langsam": 400.730954124814,
+        "ma_schnell": 399.1375045776367,
         "signal": 0
       },
+      "MSF.DE": {
+        "ma_langsam": 450.7523818243118,
+        "ma_schnell": 454.0749969482422,
+        "signal": 1
+      },
       "SAP.DE": {
-        "ma_langsam": 192.91142926897322,
-        "ma_schnell": 193.6024990081787,
+        "ma_langsam": 193.24190557570685,
+        "ma_schnell": 193.4375,
         "signal": 1
       },
       "SIE.DE": {
-        "ma_langsam": 250.96190316336495,
-        "ma_schnell": 251.41249656677246,
+        "ma_langsam": 252.21904645647322,
+        "ma_schnell": 254.0,
         "signal": 1
       },
       "SOL/EUR": {
-        "ma_langsam": 66.42761904761905,
-        "ma_schnell": 66.4925,
+        "ma_langsam": 66.62,
+        "ma_schnell": 66.89,
         "signal": 1
       },
       "UNI/EUR": {
-        "ma_langsam": 4.4269,
-        "ma_schnell": 4.4430250000000004,
+        "ma_langsam": 4.444014285714285,
+        "ma_schnell": 4.4609875,
         "signal": 1
       },
       "XLM/EUR": {
-        "ma_langsam": 0.11761790476190476,
-        "ma_schnell": 0.118236625,
+        "ma_langsam": 0.11803038095238096,
+        "ma_schnell": 0.1183905,
         "signal": 1
       },
       "XRP/EUR": {
-        "ma_langsam": 0.8810828571428571,
-        "ma_schnell": 0.8868750000000001,
+        "ma_langsam": 0.8858042857142857,
+        "ma_schnell": 0.89175125,
         "signal": 1
       }
     },
     "extralangsam": {
       "AAVE/EUR": {
-        "ma_langsam": 96.7973,
-        "ma_schnell": 115.915,
+        "ma_langsam": 96.80375,
+        "ma_schnell": 115.9408,
         "signal": 1
       },
       "ADA/EUR": {
-        "ma_langsam": 0.17273780500000002,
-        "ma_schnell": 0.17021609999999998,
+        "ma_langsam": 0.172735945,
+        "ma_schnell": 0.17020865999999998,
         "signal": 0
       },
       "AIR.PA": {
-        "ma_langsam": 187.7910698699951,
-        "ma_schnell": 194.86120056152345,
+        "ma_langsam": 187.8088836669922,
+        "ma_schnell": 194.88600036621094,
         "signal": 1
       },
       "ALV.DE": {
-        "ma_langsam": 404.3238996887207,
-        "ma_schnell": 438.8440002441406,
+        "ma_langsam": 405.38552505493163,
+        "ma_schnell": 439.38200012207034,
         "signal": 1
       },
       "APC.DE": {
-        "ma_langsam": 265.64281509399416,
-        "ma_schnell": 306.6115734863281,
+        "ma_langsam": 266.72694816589353,
+        "ma_schnell": 308.0044323730469,
         "signal": 1
       },
       "ASML.AS": {
-        "ma_langsam": 1397.8375457763673,
-        "ma_schnell": 1438.9433715820312,
+        "ma_langsam": 1397.9382611083984,
+        "ma_schnell": 1429.7998974609375,
         "signal": 1
       },
       "ATOM/EUR": {
-        "ma_langsam": 1.422175,
-        "ma_schnell": 1.354938,
+        "ma_langsam": 1.4221620000000001,
+        "ma_schnell": 1.3548860000000003,
         "signal": 0
       },
       "AVAX/EUR": {
-        "ma_langsam": 6.938140000000001,
-        "ma_schnell": 7.61198,
+        "ma_langsam": 6.938300000000001,
+        "ma_schnell": 7.61262,
         "signal": 1
       },
       "BCH/EUR": {
-        "ma_langsam": 222.87489999999997,
-        "ma_schnell": 225.9432,
+        "ma_langsam": 222.86925,
+        "ma_schnell": 225.9206,
         "signal": 1
       },
       "BTC/EUR": {
-        "ma_langsam": 62960.27850000001,
-        "ma_schnell": 66740.292,
+        "ma_langsam": 62960.1615,
+        "ma_schnell": 66739.824,
         "signal": 1
       },
       "DOGE/EUR": {
-        "ma_langsam": 0.070923259,
-        "ma_schnell": 0.064060972,
+        "ma_langsam": 0.0709235545,
+        "ma_schnell": 0.064062154,
         "signal": 0
       },
       "DOT/EUR": {
-        "ma_langsam": 0.8469784999999999,
-        "ma_schnell": 0.8363879999999999,
+        "ma_langsam": 0.8469694999999998,
+        "ma_schnell": 0.836352,
         "signal": 0
       },
       "ETH/EUR": {
-        "ma_langsam": 1846.4939,
-        "ma_schnell": 1933.4134,
+        "ma_langsam": 1846.4879499999997,
+        "ma_schnell": 1933.3896,
         "signal": 1
       },
       "FIL/EUR": {
-        "ma_langsam": 0.72649,
-        "ma_schnell": 0.7471400000000001,
+        "ma_langsam": 0.7264849999999999,
+        "ma_schnell": 0.74712,
         "signal": 1
       },
       "LINK/EUR": {
-        "ma_langsam": 8.81806995,
-        "ma_schnell": 9.756121,
+        "ma_langsam": 8.81795665,
+        "ma_schnell": 9.7556678,
         "signal": 1
       },
       "LTC/EUR": {
-        "ma_langsam": 44.703149999999994,
-        "ma_schnell": 47.45259999999999,
+        "ma_langsam": 44.703050000000005,
+        "ma_schnell": 47.45219999999999,
         "signal": 1
       },
       "MC.PA": {
-        "ma_langsam": 454.2101237487793,
-        "ma_schnell": 393.53399963378905,
+        "ma_langsam": 453.0590364074707,
+        "ma_schnell": 393.2120001220703,
         "signal": 0
       },
       "MSF.DE": {
-        "ma_langsam": 386.8361311340332,
-        "ma_schnell": 464.053984375,
+        "ma_langsam": 388.0187791442871,
+        "ma_schnell": 464.9578491210938,
         "signal": 1
       },
       "SAP.DE": {
-        "ma_langsam": 166.74684936523437,
-        "ma_schnell": 198.0761996459961,
+        "ma_langsam": 167.01815368652345,
+        "ma_schnell": 198.3861996459961,
         "signal": 1
       },
       "SIE.DE": {
-        "ma_langsam": 260.67849922180176,
-        "ma_schnell": 269.7669985961914,
+        "ma_langsam": 260.8527492523193,
+        "ma_schnell": 269.26599853515626,
         "signal": 1
       },
       "SOL/EUR": {
-        "ma_langsam": 76.95465,
-        "ma_schnell": 81.32400000000001,
+        "ma_langsam": 76.9567,
+        "ma_schnell": 81.3322,
         "signal": 1
       },
       "UNI/EUR": {
-        "ma_langsam": 4.4314845,
-        "ma_schnell": 5.7869779999999995,
+        "ma_langsam": 4.431514,
+        "ma_schnell": 5.787095999999999,
         "signal": 1
       },
       "XLM/EUR": {
-        "ma_langsam": 0.157742215,
-        "ma_schnell": 0.14309713999999998,
+        "ma_langsam": 0.15774147,
+        "ma_schnell": 0.14309416,
         "signal": 0
       },
       "XRP/EUR": {
-        "ma_langsam": 1.0743828500000001,
-        "ma_schnell": 1.0528798000000001,
+        "ma_langsam": 1.0743915,
+        "ma_schnell": 1.0529144,
         "signal": 0
       }
     },
     "langsam": {
       "AAVE/EUR": {
-        "ma_langsam": 115.915,
-        "ma_schnell": 97.1645,
+        "ma_langsam": 115.9408,
+        "ma_schnell": 97.22900000000001,
         "signal": 0
       },
       "ADA/EUR": {
-        "ma_langsam": 0.17021609999999998,
-        "ma_schnell": 0.14198835,
+        "ma_langsam": 0.17020865999999998,
+        "ma_schnell": 0.14196975,
         "signal": 0
       },
       "AIR.PA": {
-        "ma_langsam": 194.86120056152345,
-        "ma_schnell": 199.19300003051757,
+        "ma_langsam": 194.88600036621094,
+        "ma_schnell": 199.2620002746582,
         "signal": 1
       },
       "ALV.DE": {
-        "ma_langsam": 438.8440002441406,
-        "ma_schnell": 457.3150009155273,
+        "ma_langsam": 439.38200012207034,
+        "ma_schnell": 459.4649993896484,
         "signal": 1
       },
       "APC.DE": {
-        "ma_langsam": 306.6115734863281,
-        "ma_schnell": 315.0363433837891,
+        "ma_langsam": 308.0044323730469,
+        "ma_schnell": 316.44024963378905,
         "signal": 1
       },
       "ASML.AS": {
-        "ma_langsam": 1438.9433715820312,
-        "ma_schnell": 1313.5700073242188,
+        "ma_langsam": 1429.7998974609375,
+        "ma_schnell": 1287.8400024414063,
         "signal": 0
       },
       "ATOM/EUR": {
-        "ma_langsam": 1.354938,
-        "ma_schnell": 1.173305,
+        "ma_langsam": 1.3548860000000003,
+        "ma_schnell": 1.173175,
         "signal": 0
       },
       "AVAX/EUR": {
-        "ma_langsam": 7.61198,
-        "ma_schnell": 6.6185,
+        "ma_langsam": 7.61262,
+        "ma_schnell": 6.620099999999999,
         "signal": 0
       },
       "BCH/EUR": {
-        "ma_langsam": 225.9432,
-        "ma_schnell": 192.62849999999997,
+        "ma_langsam": 225.9206,
+        "ma_schnell": 192.572,
         "signal": 0
       },
       "BTC/EUR": {
-        "ma_langsam": 66740.292,
-        "ma_schnell": 59217.6,
+        "ma_langsam": 66739.824,
+        "ma_schnell": 59216.43000000001,
         "signal": 0
       },
       "DOGE/EUR": {
-        "ma_langsam": 0.064060972,
-        "ma_schnell": 0.05467881,
+        "ma_langsam": 0.064062154,
+        "ma_schnell": 0.05468176499999999,
         "signal": 0
       },
       "DOT/EUR": {
-        "ma_langsam": 0.8363879999999999,
-        "ma_schnell": 0.667535,
+        "ma_langsam": 0.836352,
+        "ma_schnell": 0.667445,
         "signal": 0
       },
       "ETH/EUR": {
-        "ma_langsam": 1933.4134,
-        "ma_schnell": 1660.9595000000002,
+        "ma_langsam": 1933.3896,
+        "ma_schnell": 1660.9,
         "signal": 0
       },
       "FIL/EUR": {
-        "ma_langsam": 0.7471400000000001,
-        "ma_schnell": 0.56045,
+        "ma_langsam": 0.74712,
+        "ma_schnell": 0.5604,
         "signal": 0
       },
       "LINK/EUR": {
-        "ma_langsam": 9.756121,
-        "ma_schnell": 8.5256575,
+        "ma_langsam": 9.7556678,
+        "ma_schnell": 8.5245245,
         "signal": 0
       },
       "LTC/EUR": {
-        "ma_langsam": 47.45259999999999,
-        "ma_schnell": 40.9155,
+        "ma_langsam": 47.45219999999999,
+        "ma_schnell": 40.914500000000004,
         "signal": 0
       },
       "MC.PA": {
-        "ma_langsam": 393.53399963378905,
-        "ma_schnell": 397.89000244140624,
+        "ma_langsam": 393.2120001220703,
+        "ma_schnell": 399.2975021362305,
         "signal": 1
       },
       "MSF.DE": {
-        "ma_langsam": 464.053984375,
-        "ma_schnell": 467.74378204345703,
+        "ma_langsam": 464.9578491210938,
+        "ma_schnell": 466.26893310546876,
         "signal": 1
       },
       "SAP.DE": {
-        "ma_langsam": 198.0761996459961,
-        "ma_schnell": 204.12049865722656,
+        "ma_langsam": 198.3861996459961,
+        "ma_schnell": 202.44399871826172,
         "signal": 1
       },
       "SIE.DE": {
-        "ma_langsam": 269.7669985961914,
-        "ma_schnell": 268.3949966430664,
+        "ma_langsam": 269.26599853515626,
+        "ma_schnell": 266.7024971008301,
         "signal": 0
       },
       "SOL/EUR": {
-        "ma_langsam": 81.32400000000001,
-        "ma_schnell": 68.125,
+        "ma_langsam": 81.3322,
+        "ma_schnell": 68.1455,
         "signal": 0
       },
       "UNI/EUR": {
-        "ma_langsam": 5.7869779999999995,
-        "ma_schnell": 4.84244,
+        "ma_langsam": 5.787095999999999,
+        "ma_schnell": 4.842735,
         "signal": 0
       },
       "XLM/EUR": {
-        "ma_langsam": 0.14309713999999998,
-        "ma_schnell": 0.12377365,
+        "ma_langsam": 0.14309416,
+        "ma_schnell": 0.1237662,
         "signal": 0
       },
       "XRP/EUR": {
-        "ma_langsam": 1.0528798000000001,
-        "ma_schnell": 0.8898845,
+        "ma_langsam": 1.0529144,
+        "ma_schnell": 0.8899709999999998,
         "signal": 0
       }
     },
     "schnell": {
       "AAVE/EUR": {
-        "ma_langsam": 97.1645,
-        "ma_schnell": 86.99,
+        "ma_langsam": 97.22900000000001,
+        "ma_schnell": 87.248,
         "signal": 0
       },
       "ADA/EUR": {
-        "ma_langsam": 0.14198835,
-        "ma_schnell": 0.1350618,
+        "ma_langsam": 0.14196975,
+        "ma_schnell": 0.1349874,
         "signal": 0
       },
       "AIR.PA": {
-        "ma_langsam": 199.19300003051757,
-        "ma_schnell": 193.49200134277345,
+        "ma_langsam": 199.2620002746582,
+        "ma_schnell": 193.8959991455078,
         "signal": 0
       },
       "ALV.DE": {
-        "ma_langsam": 457.3150009155273,
-        "ma_schnell": 455.0199951171875,
+        "ma_langsam": 459.4649993896484,
+        "ma_schnell": 457.4199951171875,
         "signal": 0
       },
       "APC.DE": {
-        "ma_langsam": 315.0363433837891,
-        "ma_schnell": 318.5299987792969,
+        "ma_langsam": 316.44024963378905,
+        "ma_schnell": 321.9699951171875,
         "signal": 1
       },
       "ASML.AS": {
-        "ma_langsam": 1313.5700073242188,
-        "ma_schnell": 1212.2399658203126,
+        "ma_langsam": 1287.8400024414063,
+        "ma_schnell": 1201.5999755859375,
         "signal": 0
       },
       "ATOM/EUR": {
-        "ma_langsam": 1.173305,
-        "ma_schnell": 1.13612,
+        "ma_langsam": 1.173175,
+        "ma_schnell": 1.1356000000000002,
         "signal": 0
       },
       "AVAX/EUR": {
-        "ma_langsam": 6.6185,
-        "ma_schnell": 6.0798000000000005,
+        "ma_langsam": 6.620099999999999,
+        "ma_schnell": 6.0862,
         "signal": 0
       },
       "BCH/EUR": {
-        "ma_langsam": 192.62849999999997,
-        "ma_schnell": 187.19599999999997,
+        "ma_langsam": 192.572,
+        "ma_schnell": 186.96999999999997,
         "signal": 0
       },
       "BTC/EUR": {
-        "ma_langsam": 59217.6,
-        "ma_schnell": 55430.02,
+        "ma_langsam": 59216.43000000001,
+        "ma_schnell": 55425.340000000004,
         "signal": 0
       },
       "DOGE/EUR": {
-        "ma_langsam": 0.05467881,
-        "ma_schnell": 0.05152284,
+        "ma_langsam": 0.05468176499999999,
+        "ma_schnell": 0.051534659999999996,
         "signal": 0
       },
       "DOT/EUR": {
-        "ma_langsam": 0.667535,
-        "ma_schnell": 0.60966,
+        "ma_langsam": 0.667445,
+        "ma_schnell": 0.6093,
         "signal": 0
       },
       "ETH/EUR": {
-        "ma_langsam": 1660.9595000000002,
-        "ma_schnell": 1551.748,
+        "ma_langsam": 1660.9,
+        "ma_schnell": 1551.51,
         "signal": 0
       },
       "FIL/EUR": {
-        "ma_langsam": 0.56045,
-        "ma_schnell": 0.49640000000000006,
+        "ma_langsam": 0.5604,
+        "ma_schnell": 0.4962,
         "signal": 0
       },
       "LINK/EUR": {
-        "ma_langsam": 8.5256575,
-        "ma_schnell": 8.35675,
+        "ma_langsam": 8.5245245,
+        "ma_schnell": 8.352217999999999,
         "signal": 0
       },
       "LTC/EUR": {
-        "ma_langsam": 40.9155,
-        "ma_schnell": 38.944,
+        "ma_langsam": 40.914500000000004,
+        "ma_schnell": 38.940000000000005,
         "signal": 0
       },
       "MC.PA": {
-        "ma_langsam": 397.89000244140624,
-        "ma_schnell": 389.6700012207031,
+        "ma_langsam": 399.2975021362305,
+        "ma_schnell": 394.7,
         "signal": 0
       },
       "MSF.DE": {
-        "ma_langsam": 467.74378204345703,
-        "ma_schnell": 452.42999267578125,
+        "ma_langsam": 466.26893310546876,
+        "ma_schnell": 450.8999938964844,
         "signal": 0
       },
       "SAP.DE": {
-        "ma_langsam": 204.12049865722656,
-        "ma_schnell": 187.38800048828125,
+        "ma_langsam": 202.44399871826172,
+        "ma_schnell": 190.5720001220703,
         "signal": 0
       },
       "SIE.DE": {
-        "ma_langsam": 268.3949966430664,
-        "ma_schnell": 257.3699951171875,
+        "ma_langsam": 266.7024971008301,
+        "ma_schnell": 254.1699981689453,
         "signal": 0
       },
       "SOL/EUR": {
-        "ma_langsam": 68.125,
-        "ma_schnell": 65.028,
+        "ma_langsam": 68.1455,
+        "ma_schnell": 65.11,
         "signal": 0
       },
       "UNI/EUR": {
-        "ma_langsam": 4.84244,
-        "ma_schnell": 4.34868,
+        "ma_langsam": 4.842735,
+        "ma_schnell": 4.34986,
         "signal": 0
       },
       "XLM/EUR": {
-        "ma_langsam": 0.12377365,
-        "ma_schnell": 0.1165316,
+        "ma_langsam": 0.1237662,
+        "ma_schnell": 0.11650180000000002,
         "signal": 0
       },
       "XRP/EUR": {
-        "ma_langsam": 0.8898845,
-        "ma_schnell": 0.8619,
+        "ma_langsam": 0.8899709999999998,
+        "ma_schnell": 0.8622460000000001,
         "signal": 0
       }
     }
   },
   "strategien": {
     "day": {
-      "gesamtwert": 2359.820889597672,
-      "investiert": 11,
+      "gesamtwert": 2357.6269570858294,
+      "investiert": 15,
       "meldungen": [
-        "MA-Signal ETH zu 1580.8900 (+1.1 %)",
-        "MA-Signal DOT zu 0.6249 (+0.4 %)",
-        "MA-Signal LTC zu 40.5100 (+0.1 %)",
-        "MA-Signal AAVE zu 87.8000 (+1.0 %)"
+        "MA-Signal LINK zu 8.7406 (+2.0 %)",
+        "MA-Signal ATOM zu 1.1296 (+1.3 %)",
+        "KAUF AAVE 1.102172 zu 88.9600",
+        "MA-Signal FIL zu 0.4990 (-0.2 %)",
+        "KAUF SAP 0.507943 zu 192.4800",
+        "KAUF Siemens 0.383790 zu 255.2500",
+        "KAUF Allianz 0.211706 zu 461.9000",
+        "KAUF ASML 0.080921 zu 1234.8000",
+        "KAUF Airbus 0.498777 zu 196.2800",
+        "KAUF Microsoft 0.214356 zu 457.5500"
       ],
       "name": "Daytrader MA8/21",
       "zeitfenster": "15m"
     },
     "extralangsam": {
-      "gesamtwert": 2444.224291887284,
+      "gesamtwert": 2456.9368489040976,
       "investiert": 17,
       "meldungen": [],
       "name": "Extra-langsam MA50/200",
       "zeitfenster": "1d"
     },
     "langsam": {
-      "gesamtwert": 2404.0976691310225,
+      "gesamtwert": 2406.717508203747,
       "investiert": 6,
       "meldungen": [],
       "name": "Langsam MA20/50",
       "zeitfenster": "1d"
     },
     "schnell": {
-      "gesamtwert": 2401.772198523597,
+      "gesamtwert": 2402.7065310762905,
       "investiert": 1,
       "meldungen": [],
       "name": "Schnell MA5/20",
@@ -530,147 +536,147 @@
     "AAVE/EUR": {
       "alter_min": 0.0,
       "name": "AAVE",
-      "preis": 87.8,
+      "preis": 88.96,
       "typ": "krypto"
     },
     "ADA/EUR": {
       "alter_min": 0.0,
       "name": "ADA",
-      "preis": 0.139458,
+      "preis": 0.139086,
       "typ": "krypto"
     },
     "AIR.PA": {
-      "alter_min": 958.1,
+      "alter_min": 17.8,
       "name": "Airbus",
-      "preis": 194.63999939,
+      "preis": 196.27999878,
       "typ": "aktie"
     },
     "ALV.DE": {
-      "alter_min": 958.1,
+      "alter_min": 17.8,
       "name": "Allianz",
-      "preis": 460.0,
+      "preis": 461.8999939,
       "typ": "aktie"
     },
     "APC.DE": {
-      "alter_min": 958.1,
+      "alter_min": 572.8,
       "name": "Apple",
-      "preis": 324.3500061,
+      "preis": 327.3500061,
       "typ": "aktie"
     },
     "ASML.AS": {
-      "alter_min": 958.1,
+      "alter_min": 17.8,
       "name": "ASML",
-      "preis": 1171.19995117,
+      "preis": 1234.80004883,
       "typ": "aktie"
     },
     "ATOM/EUR": {
       "alter_min": 0.0,
       "name": "ATOM",
-      "preis": 1.1322,
+      "preis": 1.1296,
       "typ": "krypto"
     },
     "AVAX/EUR": {
       "alter_min": 0.0,
       "name": "AVAX",
-      "preis": 6.164,
+      "preis": 6.196,
       "typ": "krypto"
     },
     "BCH/EUR": {
       "alter_min": 0.0,
       "name": "BCH",
-      "preis": 194.43,
+      "preis": 193.23,
       "typ": "krypto"
     },
     "BTC/EUR": {
       "alter_min": 0.0,
       "name": "BTC",
-      "preis": 56304.1,
+      "preis": 56285.5,
       "typ": "krypto"
     },
     "DOGE/EUR": {
       "alter_min": 0.0,
       "name": "DOGE",
-      "preis": 0.0530814,
+      "preis": 0.0531343,
       "typ": "krypto"
     },
     "DOT/EUR": {
       "alter_min": 0.0,
       "name": "DOT",
-      "preis": 0.6249,
+      "preis": 0.6231,
       "typ": "krypto"
     },
     "ETH/EUR": {
       "alter_min": 0.0,
       "name": "ETH",
-      "preis": 1580.89,
+      "preis": 1579.14,
       "typ": "krypto"
     },
     "FIL/EUR": {
       "alter_min": 0.0,
       "name": "FIL",
-      "preis": 0.5,
+      "preis": 0.499,
       "typ": "krypto"
     },
     "LINK/EUR": {
       "alter_min": 0.0,
       "name": "LINK",
-      "preis": 8.76327,
+      "preis": 8.74061,
       "typ": "krypto"
     },
     "LTC/EUR": {
       "alter_min": 0.0,
       "name": "LTC",
-      "preis": 40.51,
+      "preis": 40.53,
       "typ": "krypto"
     },
     "MC.PA": {
-      "alter_min": 958.1,
+      "alter_min": 17.8,
       "name": "LVMH",
-      "preis": 401.75,
+      "preis": 397.95001221,
       "typ": "aktie"
     },
     "MSF.DE": {
-      "alter_min": 958.1,
+      "alter_min": 32.8,
       "name": "Microsoft",
-      "preis": 448.70001221,
+      "preis": 457.54998779,
       "typ": "aktie"
     },
     "SAP.DE": {
-      "alter_min": 958.1,
+      "alter_min": 17.8,
       "name": "SAP",
-      "preis": 193.55999756,
+      "preis": 192.47999573,
       "typ": "aktie"
     },
     "SIE.DE": {
-      "alter_min": 958.1,
+      "alter_min": 17.8,
       "name": "Siemens",
-      "preis": 250.25,
+      "preis": 255.25,
       "typ": "aktie"
     },
     "SOL/EUR": {
       "alter_min": 0.0,
       "name": "SOL",
-      "preis": 66.73,
+      "preis": 67.14,
       "typ": "krypto"
     },
     "UNI/EUR": {
       "alter_min": 0.0,
       "name": "UNI",
-      "preis": 4.4635,
+      "preis": 4.4694,
       "typ": "krypto"
     },
     "XLM/EUR": {
       "alter_min": 0.0,
       "name": "XLM",
-      "preis": 0.118366,
+      "preis": 0.118104,
       "typ": "krypto"
     },
     "XRP/EUR": {
       "alter_min": 0.0,
       "name": "XRP",
-      "preis": 0.89054,
+      "preis": 0.89227,
       "typ": "krypto"
     }
   },
-  "zeit": "2026-11-27T08:12:26+00:00"
+  "zeit": "2026-11-27T09:32:08+00:00"
 }
