@@ -72,10 +72,10 @@
     "menge": 147.18177234928848
   },
   "ETH/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1523.0,
-    "einstiegszeit": "2026-11-27T20:21:24+00:00",
-    "menge": 0.06333642144046148
+    "bargeld": 96.17014037428626,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "FIL/EUR": {
     "bargeld": 0.0,
@@ -132,10 +132,10 @@
     "menge": 22.317464569400073
   },
   "XLM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.115793,
-    "einstiegszeit": "2026-11-27T20:21:24+00:00",
-    "menge": 864.0819718567046
+    "bargeld": 99.79794903484358,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XRP/EUR": {
     "bargeld": 0.0,
