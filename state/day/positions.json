@@ -48,10 +48,10 @@
     "menge": 0.0
   },
   "BCH/EUR": {
-    "bargeld": 94.8472323705915,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 188.2,
+    "einstiegszeit": "2026-11-28T16:24:27+00:00",
+    "menge": 0.5026600933391496
   },
   "BTC/EUR": {
     "bargeld": 0.0,
@@ -72,10 +72,10 @@
     "menge": 0.0
   },
   "ETH/EUR": {
-    "bargeld": 95.36094774273914,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 1506.36,
+    "einstiegszeit": "2026-11-28T16:24:27+00:00",
+    "menge": 0.0631409552023474
   },
   "FIL/EUR": {
     "bargeld": 90.08288813619212,
@@ -90,10 +90,10 @@
     "menge": 0.0
   },
   "LTC/EUR": {
-    "bargeld": 95.29076263712543,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 40.15,
+    "einstiegszeit": "2026-11-28T16:24:27+00:00",
+    "menge": 2.3671981732071954
   },
   "MC.PA": {
     "bargeld": 94.831839398541,
@@ -138,9 +138,9 @@
     "menge": 0.0
   },
   "XRP/EUR": {
-    "bargeld": 97.58307489275965,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 0.85804,
+    "einstiegszeit": "2026-11-28T16:24:27+00:00",
+    "menge": 113.43219301901831
   }
 }
