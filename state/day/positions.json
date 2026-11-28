@@ -72,10 +72,10 @@
     "menge": 0.0
   },
   "ETH/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1506.36,
-    "einstiegszeit": "2026-11-28T16:24:27+00:00",
-    "menge": 0.0631409552023474
+    "bargeld": 94.78636470069793,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "FIL/EUR": {
     "bargeld": 90.08288813619212,
