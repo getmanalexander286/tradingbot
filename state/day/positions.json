@@ -90,10 +90,10 @@
     "menge": 0.0
   },
   "LTC/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 40.15,
-    "einstiegszeit": "2026-11-28T16:24:27+00:00",
-    "menge": 2.3671981732071954
+    "bargeld": 94.06397136500118,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "MC.PA": {
     "bargeld": 94.831839398541,
@@ -138,9 +138,9 @@
     "menge": 0.0
   },
   "XRP/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.85804,
-    "einstiegszeit": "2026-11-28T16:24:27+00:00",
-    "menge": 113.43219301901831
+    "bargeld": 96.86247312589411,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   }
 }
