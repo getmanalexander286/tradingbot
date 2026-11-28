@@ -1,9 +1,9 @@
 {
   "AAVE/EUR": {
-    "bargeld": 96.66803605570978,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 85.54,
+    "einstiegszeit": "2026-11-28T12:35:39+00:00",
+    "menge": 1.1271533687393607
   },
   "ADA/EUR": {
     "bargeld": 94.81834546596089,
