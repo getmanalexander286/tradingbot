@@ -78,10 +78,10 @@
     "menge": 0.06286750647833073
   },
   "FIL/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.487,
-    "einstiegszeit": "2026-11-28T01:51:18+00:00",
-    "menge": 186.22209111978182
+    "bargeld": 90.08288813619212,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "LINK/EUR": {
     "bargeld": 0.0,
