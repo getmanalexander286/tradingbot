@@ -1,15 +1,15 @@
 {
   "AAVE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 85.29,
-    "einstiegszeit": "2026-11-28T09:53:45+00:00",
-    "menge": 1.1360922298540004
+    "bargeld": 96.66803605570978,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ADA/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 0.133683,
-    "einstiegszeit": "2026-11-28T09:53:45+00:00",
-    "menge": 714.6117506976511
+    "bargeld": 94.81834546596089,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AIR.PA": {
     "bargeld": 97.3667724824978,
@@ -84,10 +84,10 @@
     "menge": 0.0
   },
   "LINK/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 8.37799,
-    "einstiegszeit": "2026-11-28T09:53:45+00:00",
-    "menge": 11.378880001935338
+    "bargeld": 95.10641042104112,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "LTC/EUR": {
     "bargeld": 95.29076263712543,
