@@ -1,9 +1,9 @@
 {
   "AAVE/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 85.54,
-    "einstiegszeit": "2026-11-28T12:35:39+00:00",
-    "menge": 1.1271533687393607
+    "bargeld": 95.13173079576161,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "ADA/EUR": {
     "bargeld": 94.81834546596089,
@@ -36,10 +36,10 @@
     "menge": 0.0
   },
   "ATOM/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 1.1029,
-    "einstiegszeit": "2026-11-28T11:37:19+00:00",
-    "menge": 77.42221955824009
+    "bargeld": 84.30208031529219,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "AVAX/EUR": {
     "bargeld": 96.77059504440156,
@@ -126,10 +126,10 @@
     "menge": 0.0
   },
   "UNI/EUR": {
-    "bargeld": 0.0,
-    "einstieg": 4.2792,
-    "einstiegszeit": "2026-11-28T09:53:45+00:00",
-    "menge": 22.148675776322968
+    "bargeld": 93.88712918204425,
+    "einstieg": 0.0,
+    "einstiegszeit": null,
+    "menge": 0.0
   },
   "XLM/EUR": {
     "bargeld": 98.45451705625524,
