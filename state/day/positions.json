@@ -54,10 +54,10 @@
     "menge": 0.0
   },
   "BTC/EUR": {
-    "bargeld": 96.70680989302228,
-    "einstieg": 0.0,
-    "einstiegszeit": null,
-    "menge": 0.0
+    "bargeld": 0.0,
+    "einstieg": 54190.5,
+    "einstiegszeit": "2026-11-28T15:27:09+00:00",
+    "menge": 0.00177993139364465
   },
   "DOGE/EUR": {
     "bargeld": 93.55081030714425,
